@@ -1,0 +1,18 @@
+{
+  "id": "utility.botanical-calculator",
+  "name": "Botanical Nature Calculator",
+  "description": "An ivory, sage, and dusty-rose botanical desktop calculator.",
+  "version": "1.0.0",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.BotanicalCalculator.dll",
+  "type": "EmilyDesk.Widgets.Calculator.CalculatorWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [ "calculator", "offline", "designer", "theme-switching", "scale", "opacity" ]
+}

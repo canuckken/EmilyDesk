@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D248751F-9392-4E0D-A41E-01F0902252A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XWidgetReborn.Runtime</RootNamespace>
+    <AssemblyName>EmilyDesk.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel><PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType><Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel><PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" /><Reference Include="System.Core" />
+    <Reference Include="System.Drawing" /><Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" /><Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" /><Compile Include="RuntimeProgram.cs" />
+    <Compile Include="RuntimeLog.cs" />
+    <Compile Include="ArtDecoWeatherLaunchVerification.cs" />
+    <Compile Include="RuntimeApplicationContext.cs" />
+    <Compile Include="EngineHostWindow.cs" />
+    <Compile Include="Core\RuntimeHost.cs" /><Compile Include="Core\EngineScheduler.cs" /><Compile Include="Core\WidgetInstance.cs" />
+    <Compile Include="Core\WidgetStateStore.cs" />
+    <Compile Include="Core\NatureWeatherPlacement.cs" />
+    <Compile Include="Core\EventDispatcher.cs" />
+    <Compile Include="Core\ServiceContainer.cs" />
+    <Compile Include="Core\WidgetRuntimeContext.cs" />
+    <Compile Include="Core\RuntimePackageManager.cs" />
+    <Compile Include="Core\LifecycleState.cs" />
+    <Compile Include="Core\LifecycleManager.cs" />
+    <Compile Include="Core\WidgetRegistry.cs" /><Compile Include="Core\WidgetPluginManifest.cs" /><Compile Include="Core\WidgetWindow.cs" />
+    <Compile Include="Compatibility\LegacyXWidgetAdapter.cs" />
+    <Compile Include="Compatibility\LegacyExternalWidget.cs" />
+    <Compile Include="Compatibility\LegacyWidgetManifest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XWidgetReborn.WidgetSdk\XWidgetReborn.WidgetSdk.csproj">
+      <Project>{B9ABAD31-6D3E-43EA-AE3E-A9178A94E616}</Project><Name>XWidgetReborn.WidgetSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.Shared\XWidgetReborn.Shared.csproj">
+      <Project>{A1D5BD88-8377-48E2-A47C-C2FC55118A01}</Project><Name>XWidgetReborn.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

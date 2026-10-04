@@ -1,0 +1,18 @@
+{
+  "id": "utility.system-info",
+  "name": "Steampunk System Information",
+  "description": "Live CPU, optional Core Temp temperature, memory, system disk, network, and uptime information.",
+  "version": "1.0.5",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.SystemInfo.dll",
+  "type": "EmilyDesk.Widgets.SystemInfo.SystemInfoWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [ "system-information", "core-temp-optional", "network", "offline", "designer", "theme-switching", "scale", "opacity" ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550" height="363" viewBox="0 0 550 363">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26160f"/><stop offset="1" stop-color="#0d0807"/></linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9d4b19"/><stop offset="1" stop-color="#421a0b"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>text{font-family:'Segoe UI',sans-serif;fill:#f6dfbd}.serif{font-family:Georgia,serif}.amber{fill:#ff9b28}.label{fill:#dc8131}.muted{fill:#b58b6c}</style>
+  </defs>
+  <image xlink:href="ember-glow-currency-converter-skin.png" width="550" height="363"/>
+  <text x="275" y="57" text-anchor="middle" font-size="17" font-weight="bold" class="serif">CURRENCY</text><text x="275" y="69" text-anchor="middle" font-size="7" font-weight="bold" class="label">CONVERTER</text>
+  <text x="58" y="91" font-size="13" font-weight="bold" class="label">AMOUNT</text>
+  <rect x="48" y="98" width="454" height="63" rx="12" fill="url(#panel)" stroke="#ef7718" stroke-width="1.7" filter="url(#glow)"/>
+  <text x="68" y="144" font-size="31" font-weight="bold" class="serif">1.00</text><rect x="419" y="109" width="65" height="41" rx="9" fill="url(#badge)" stroke="#ef7718"/><text x="451.5" y="136" text-anchor="middle" font-size="15" font-weight="bold">CAD</text>
+  <line x1="58" y1="178" x2="192" y2="178" stroke="#ad521b"/><line x1="358" y1="178" x2="492" y2="178" stroke="#ad521b"/><text x="275" y="176" text-anchor="middle" font-size="13" font-weight="bold" class="label">CONVERTS TO</text>
+  <rect x="48" y="187" width="454" height="67" rx="12" fill="url(#panel)" stroke="#ef7718" stroke-width="1.7" filter="url(#glow)"/>
+  <text x="68" y="237" font-size="34" font-weight="bold" class="serif amber">0.7147</text><rect x="419" y="200" width="65" height="41" rx="9" fill="url(#badge)" stroke="#ef7718"/><text x="451.5" y="227" text-anchor="middle" font-size="15" font-weight="bold">USD</text>
+  <text x="275" y="276" text-anchor="middle" font-size="12" font-weight="bold">1 CAD = 0.714732 USD</text><text x="275" y="296" text-anchor="middle" font-size="10" class="muted">Rates By Exchange Rate API</text><text x="275" y="317" text-anchor="middle" font-size="9" font-weight="bold" class="label">DOUBLE-CLICK TO CHANGE</text>
+</svg>

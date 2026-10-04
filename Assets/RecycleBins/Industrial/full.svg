@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+<defs><linearGradient id="s" x2="1" y2="1"><stop stop-color="#a8adaa"/><stop offset=".48" stop-color="#555b5b"/><stop offset="1" stop-color="#242829"/></linearGradient><linearGradient id="d" y2="1"><stop stop-color="#6f7472"/><stop offset="1" stop-color="#262929"/></linearGradient></defs>
+<ellipse cx="128" cy="226" rx="78" ry="15" fill="#000" opacity=".28"/>
+<path d="M63 72l-12-39 31-8 14 46M149 73l11-51 27 10-7 52" fill="#ddd5bf" stroke="#554c3d" stroke-width="5"/>
+<path d="M101 76l12-55 38 8-13 56z" fill="#ece8d9" stroke="#6d6657" stroke-width="5"/><path d="M115 38h25M111 52h31" stroke="#958d7c" stroke-width="4"/>
+<path d="M50 70h156l-20 156H70z" fill="url(#d)" stroke="#202323" stroke-width="7"/>
+<ellipse cx="128" cy="72" rx="82" ry="27" fill="url(#s)" stroke="#252828" stroke-width="7"/><ellipse cx="128" cy="72" rx="61" ry="14" fill="#202526" stroke="#e1a73f" stroke-width="5"/>
+<path d="M68 102h120M65 132h126M62 162h130M58 192h138" stroke="#858a87" stroke-width="5" opacity=".65"/><path d="M91 91l-8 121M128 91v126M165 91l8 121" stroke="#2a2e2f" stroke-width="5"/>
+<g fill="#d5a148" stroke="#292b2b" stroke-width="3"><circle cx="66" cy="91" r="6"/><circle cx="190" cy="91" r="6"/><circle cx="77" cy="211" r="6"/><circle cx="179" cy="211" r="6"/></g>
+</svg>

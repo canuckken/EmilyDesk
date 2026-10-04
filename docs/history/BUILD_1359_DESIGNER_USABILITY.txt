@@ -1,0 +1,40 @@
+EmilyDesk Build 1359
+Designer Colour and Boolean Editing Usability
+
+Included changes
+----------------
+- Replaces the basic text colour dialog with a visual picker inspired by the
+  approved XWidget example.
+- The large saturation/shade field changes colour strength horizontally and
+  makes the selected colour lighter or darker vertically.
+- Adds a separate hue strip, synchronized red/green/blue/alpha sliders and
+  numeric controls, #AARRGGBB and R,G,B,A entry, original/selected previews,
+  keyboard adjustment, and useful quick-colour swatches.
+- Applies the same picker to every text layer supported by EmilyDesk Designer,
+  including built-in, themed, and optional widgets.
+- Replaces user-facing True/False selection with clearly named checkboxes for
+  layer visibility, mouse locking, bold, italic, and text wrapping.
+- Hides duplicate Boolean and colour properties from Advanced Settings while
+  retaining all values in the saved layout format for backward compatibility.
+- Gives Colour a dedicated, always-visible row beside Font and Font Size and
+  uses fixed equal row allocation to prevent empty or cut-off Text sections.
+- Keeps anti-aliased widget, Designer, and Gallery-preview text as the project
+  standard.
+
+Preserved from Build 1358
+-------------------------
+- Complete Dashboard Designer widget/theme selection.
+- Right-click Edit in Designer support for all three optional widgets.
+- Automatic Designer-to-Gallery preview and icon refresh.
+- Searchable ExchangeRate-API currency list including PHP.
+- Currency Converter CONVERTS TO clipping correction.
+- Calculator, System Information, Core Temp integration, themes, clocks,
+  weather, calendar, docks, snapping, and recycle-bin behaviour.
+
+Build and validation
+--------------------
+- Run Build.cmd on Windows.
+- The build-time Designer verification checks RGB/HSV round trips, alpha and
+  exact-value parsing, visual lightening behaviour, initial-colour retention,
+  and friendly checkbox presentation.
+- No installer execution is required to produce the build.

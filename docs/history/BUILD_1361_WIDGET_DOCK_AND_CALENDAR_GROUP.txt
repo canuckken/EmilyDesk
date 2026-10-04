@@ -1,0 +1,14 @@
+EmilyDesk Build 1361
+
+- Rebuilt the Widget Dock to match the approved compact EmilyDesk design.
+- Uses an integrated charcoal shell, brass trim, ivory preview cards, blue
+  actions, and a shallow single-row layout without a native scrollbar.
+- Shows every bundled widget/theme combination and all installed optional
+  widgets, not only the current theme.
+- Retains Gallery previews, search, categories, running indicators, precise
+  widget/theme launching, mouse-wheel scrolling, arrows, and slide animation.
+- Calendar weekday and date layers are now linked automatically. Clicking and
+  dragging any calendar grid cell moves the complete text grid; selecting the
+  frame still edits the background independently.
+- Corrected the alignment of the X, Y, Width, and Height Designer controls.
+- Build identifier updated to 1361.

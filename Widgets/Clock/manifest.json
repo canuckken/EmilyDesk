@@ -1,0 +1,18 @@
+{
+  "id": "native.clock",
+  "name": "Clock",
+  "description": "The bundled EmilyDesk clock with analog and digital modes.",
+  "version": "2.0.0",
+  "author": "EmilyDesk Community Project",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "assembly": "XWidgetReborn.Widgets.Clock.dll",
+  "type": "XWidgetReborn.Widgets.Clock.NativeClockWidget",
+  "minimumSdkVersion": "2.7.1.0",
+  "minimumEngineVersion": "2.7.4.0",
+  "category": "Clock",
+  "official": true,
+  "bundled": true,
+  "capabilities": [ "settings", "styles", "themes", "analog", "digital", "scale", "opacity" ],
+  "enabledByDefault": true
+}

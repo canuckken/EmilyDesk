@@ -1,0 +1,18 @@
+{
+  "id": "utility.woodland-calculator",
+  "name": "Woodland Nature Calculator",
+  "description": "A dark-green, hardwood, and antique-brass desktop calculator.",
+  "version": "1.0.1",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.WoodlandCalculator.dll",
+  "type": "EmilyDesk.Widgets.Calculator.CalculatorWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [ "calculator", "offline", "designer", "theme-switching", "scale", "opacity" ]
+}

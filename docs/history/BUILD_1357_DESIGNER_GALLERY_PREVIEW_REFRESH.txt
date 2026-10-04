@@ -1,0 +1,22 @@
+EmilyDesk Build 1357 - Designer Gallery Preview Refresh
+
+- Designer saves continue to atomically regenerate preview.png and icon.png.
+- Clock package artwork now renders the selected clock theme and its current
+  saved layout instead of forcing the Woodland renderer for every clock.
+- Gallery always checks for higher-priority Designer artwork before reusing a
+  cached bundled preview path.
+- Returning to an open Gallery reloads preview paths and thumbnails, so a card
+  immediately reflects artwork saved while the Designer had focus.
+- The Windows build still regenerates and validates all 28 built-in
+  theme/widget Gallery previews before packaging, preventing stale fallback
+  cards from being shipped to new users.
+- Stage 5 now verifies that newly created Designer artwork replaces a fallback
+  path even after the fallback was cached.
+- The Build 1356 Currency Converter and the Build 1356 System Information text
+  anti-aliasing correction are preserved.
+- No Calculator, theme, weather, calendar, dock, or Recycle Bin behavior was
+  changed.
+
+Run Build.cmd on Windows. This change updates EmilyDesk Dashboard and Designer
+binaries, so an installed copy must be updated with the newly built installer
+before the automatic Gallery refresh behavior is available.

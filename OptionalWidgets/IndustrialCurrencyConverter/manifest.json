@@ -1,0 +1,18 @@
+{
+  "id": "utility.industrial-currency-converter",
+  "name": "Industrial Currency Converter",
+  "description": "Converts 165 currencies using searchable daily reference exchange rates in an Industrial desktop widget.",
+  "version": "1.0.2",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.IndustrialCurrencyConverter.dll",
+  "type": "EmilyDesk.Widgets.CurrencyConverter.CurrencyConverterWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [ "currency-conversion", "internet-access", "searchable-currencies", "php", "settings", "swap", "refresh", "designer", "theme-switching", "scale", "opacity" ]
+}

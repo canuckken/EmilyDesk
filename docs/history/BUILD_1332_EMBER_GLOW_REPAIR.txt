@@ -1,0 +1,24 @@
+EMILYDESK 2.10.27 BUILD 1332 - EMBER GLOW REPAIR
+
+This build corrects the first Ember Glow import release.
+
+FIXED
+- Moderately rounded Ember Glow widget-frame corners.
+- Narrower, more square Weather and Calendar frame geometry.
+- Correct Weather, Calendar, Clock, and Recycle Bin Gallery previews.
+- Imported clock face and PNG hand loading from theme:// paths.
+- Ember Glow Dock availability in the tray menu and automatic opening after import.
+- Calendar grid alignment with imported editable layouts.
+
+THEME PACKAGE
+- EmberGlow.emilytheme version 1.1.0 replaces version 1.0.0.
+- Import the new file and choose Yes when EmilyDesk asks to replace the installed theme.
+- Personal layouts and settings are preserved.
+
+WINDOWS TEST
+1. Run Build.cmd from the Build 1332 source folder.
+2. Install the generated installer over the existing EmilyDesk installation.
+3. Import EmberGlow.emilytheme version 1.1.0 and approve replacement.
+4. Confirm the four Ember Glow Gallery cards match their widget types.
+5. Launch Weather, Calendar, Clock, and Recycle Bin.
+6. Confirm the Ember Glow Dock opens and can be selected again from the tray Dock menu.

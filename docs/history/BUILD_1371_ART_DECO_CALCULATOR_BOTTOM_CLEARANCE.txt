@@ -1,0 +1,14 @@
+EmilyDesk Build 1371
+====================
+
+The Art Deco Calculator is now 300 x 420 design pixels instead of 300 x 390.
+Its width and approved Art Deco frame style remain unchanged. The additional
+height places the lower frame rail and fan below the bottom button row.
+
+Art Deco Calculator package version: 1.0.4
+
+Expected Windows build output:
+  Output\OptionalWidgets\ArtDecoCalculator-1.0.4.emilywidget
+
+Importing version 1.0.4 replaces the earlier Art Deco Calculator package.
+The Art Deco Currency Converter and System Information packages are unchanged.

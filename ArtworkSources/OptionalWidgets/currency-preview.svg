@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="400" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="display" x2="0" y2="1"><stop stop-color="#3a2317"/><stop offset="1" stop-color="#130d0b"/></linearGradient>
+    <linearGradient id="badge" x2="0" y2="1"><stop stop-color="#aa6523"/><stop offset="1" stop-color="#472414"/></linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="#e8ebee"/>
+  <g transform="translate(110 5)">
+    <image xlink:href="../../OptionalWidgets/CurrencyConverter/steampunk-currency-converter-skin.png" width="420" height="390"/>
+    <text x="210" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="15.3" font-weight="bold" fill="#492612">CURRENCY</text>
+    <text x="210" y="55" text-anchor="middle" font-family="Segoe UI,Arial" font-size="8.7" font-weight="bold" fill="#492612">CONVERTER</text>
+    <g font-family="Segoe UI,Arial">
+      <text x="52" y="94" font-size="14" font-weight="bold" fill="#d3a458">AMOUNT</text>
+      <rect x="45" y="98" width="330" height="76" rx="10" fill="url(#display)" stroke="#cd8e36" stroke-width="1.5"/>
+      <text x="60" y="148" font-family="Georgia,serif" font-size="33" font-weight="bold" fill="#ffefc9">100.00</text>
+      <rect x="300" y="113" width="58" height="44" rx="8" fill="url(#badge)" stroke="#ebb853" stroke-width="1.5"/>
+      <text x="329" y="141" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="#ffebb9">CAD</text>
+      <line x1="52" y1="191" x2="162" y2="191" stroke="#975e2d" stroke-width="1.5"/><line x1="258" y1="191" x2="368" y2="191" stroke="#975e2d" stroke-width="1.5"/>
+      <text x="210" y="196" text-anchor="middle" font-size="14" font-weight="bold" fill="#d3a458">CONVERTS TO</text>
+      <rect x="45" y="207" width="330" height="80" rx="10" fill="url(#display)" stroke="#cd8e36" stroke-width="1.5"/>
+      <text x="60" y="261" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="#ffcd70">73.25</text>
+      <rect x="300" y="225" width="58" height="44" rx="8" fill="url(#badge)" stroke="#ebb853" stroke-width="1.5"/>
+      <text x="329" y="253" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="bold" fill="#ffebb9">USD</text>
+      <text x="210" y="308" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffefc9">1 CAD = 0.7325 USD</text>
+      <text x="210" y="328" text-anchor="middle" font-size="12" fill="#b78952">Reference rate 2026-09-14</text>
+      <text x="210" y="351" text-anchor="middle" font-size="10" font-weight="bold" fill="#ebb853">DOUBLE-CLICK TO CHANGE</text>
+    </g>
+  </g>
+</svg>

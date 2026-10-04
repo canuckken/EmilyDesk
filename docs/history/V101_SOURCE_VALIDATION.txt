@@ -1,0 +1,21 @@
+EmilyDesk v101 - source validation
+
+Baseline ZIP SHA256 verified:
+db501cdd85dd2cac0a38f1739d40d997c2064ff09e8bd99d445aad8aa0c3f022
+
+PASS: baseline ZIP CRC and no removed original files.
+PASS: 399 protected artwork, dock, package and placement files unchanged.
+PASS: all ten bundled personal layouts / 505 layers byte-identical to v100.
+PASS: all 12 project XML files parse; all compile/project references exist.
+PASS: all 115 compiled C# source files have balanced lexical delimiters.
+PASS: every added C# file is registered in its project.
+PASS: build and installer versions agree at 2.10.27.
+
+Added Windows checks: 28 template create/save/reopen routes, isolated saving,
+portable artwork copying, background geometry and transparency, connected
+clock hand uniqueness/alignment, indexed forecasts, recycle-bin empty/full
+artwork and live save notifications. Existing 21-widget checks are retained.
+
+NOT RUN HERE: Windows C# compilation, executable regression checks and GUI
+interaction/rendering. Source checks are not a substitute for those tests.
+Run Build.cmd on Windows before installing/testing this build.

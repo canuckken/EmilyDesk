@@ -1,0 +1,45 @@
+EmilyDesk Build 1351 - Importable Optional Widgets
+=================================================
+
+Purpose
+-------
+Build 1351 adds the one-time EmilyDesk support needed to install individual
+widgets without rebuilding or reinstalling the main program.
+
+What changed
+------------
+- Settings and Widget Gallery now include Import Widget...
+- EmilyDesk accepts self-contained .emilywidget packages.
+- Imported widgets are stored per user under:
+  %USERPROFILE%\Documents\EmilyDesk\Widgets
+- Open Widget Folder opens that easy-to-find Documents location.
+- Imported widgets appear once in Gallery under the Imported filter.
+- Right-click an imported widget card and choose Remove Imported Widget...
+  to remove only that widget.
+- Bundled EmilyDesk widgets cannot be overwritten or removed by an imported
+  package.
+- Package, image, manifest, assembly, SDK-version, and EmilyDesk-version checks
+  run before installation.
+- The user sees the widget publisher and a trust warning before executable
+  widget code is installed.
+
+Starter optional widgets
+------------------------
+The Windows build creates these separate files under Output\OptionalWidgets:
+
+- Calculator-1.0.0.emilywidget
+- CurrencyConverter-1.0.0.emilywidget
+- SystemInformation-1.0.0.emilywidget
+
+They are deliberately not installed by EmilyDeskInstaller.exe. A user may
+import any combination of them after installing Build 1351.
+
+Currency Converter note
+-----------------------
+The Currency Converter uses Frankfurter v2 daily reference rates. It does not
+need an API key. These are reference rates, not live trading quotes.
+
+Building
+--------
+Run Build.cmd on the Windows build computer. A successful build creates the
+normal installer plus the three optional packages listed above.

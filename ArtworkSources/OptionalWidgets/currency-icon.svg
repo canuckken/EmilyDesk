@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="badge" x2="0" y2="1"><stop stop-color="#aa6523"/><stop offset="1" stop-color="#472414"/></linearGradient>
+  </defs>
+  <g transform="translate(12.5 20.75) scale(.55)">
+    <image xlink:href="../../OptionalWidgets/CurrencyConverter/steampunk-currency-converter-skin.png" width="420" height="390"/>
+    <text x="210" y="53" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="#492612">CURRENCY</text>
+    <rect x="74" y="113" width="100" height="70" rx="12" fill="url(#badge)" stroke="#ebb853" stroke-width="3"/>
+    <text x="124" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="bold" fill="#ffebb9">CAD</text>
+    <path d="M184 131h56l-14-13m14 13-14 13M236 169h-56l14 13m-14-13 14-13" fill="none" stroke="#d3a458" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="246" y="113" width="100" height="70" rx="12" fill="url(#badge)" stroke="#ebb853" stroke-width="3"/>
+    <text x="296" y="158" text-anchor="middle" font-family="Georgia,serif" font-size="31" font-weight="bold" fill="#ffebb9">USD</text>
+    <text x="210" y="247" text-anchor="middle" font-family="Georgia,serif" font-size="42" font-weight="bold" fill="#ffcd70">73.25</text>
+  </g>
+</svg>

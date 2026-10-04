@@ -1,0 +1,10 @@
+EmilyDesk Build 1349 - Wallpaper Page Cleanup
+
+The Wallpaper window now focuses only on wallpaper selection and management.
+The old themed Recycle Bin preview and apply controls were removed from this
+window because Recycle Bin themes are already available in Gallery.
+
+The freed space now contains two optional buttons that open dedicated wallpaper
+collections from Unsplash and Pexels in the user's default browser.
+
+No Gallery Recycle Bin functionality or themed Recycle Bin assets were removed.

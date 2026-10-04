@@ -1,0 +1,44 @@
+EMILYDESK 2.10.27 BUILD 1331 - EMBER GLOW
+============================================================
+
+BASELINE
+- EmilyDesk_v101_Designer_Installer_Fixes_Source.zip
+- Extracted as the sole source; no older release was merged.
+- Original source ZIP was not modified.
+
+IMPLEMENTED
+- Ember Glow package with approved Weather, Weather Details, Calendar, Clock,
+  Recycle Bin, Dock, clock-hand, and 1-44 weather-icon assets.
+- Dynamic imported-theme discovery shared by Gallery, widget menus, Designer,
+  and Dock Settings.
+- Dashboard Settings > Import Theme for .emilytheme packages.
+- Per-user installation under LocalAppData/EmilyDesk/Themes.
+- Atomic same-theme replacement; personal Designer layouts/settings untouched.
+- Safe archive validation: root manifest, normalized relative paths, no path
+  traversal or symbolic links, PNG/JSON only, entry/count/expanded-size limits.
+- Imported image refresh without per-frame disk scanning.
+- Built-in seven-theme validation remains isolated from user-installed themes.
+
+LOCAL VALIDATION COMPLETED
+- All package and layout JSON parsed successfully.
+- All required manifest asset/layout keys resolved.
+- 54 weather-icon PNG files and 10 primary theme PNG files are present.
+- Clock hand artwork was visually composed at 360 x 360; all pivots meet at
+  the dial center.
+- EmberGlow.emilytheme ZIP central directory and every compressed entry tested.
+- Edited C# files passed delimiter/brace balance checks.
+
+WINDOWS VALIDATION REQUIRED
+- This Linux workspace does not contain the .NET Framework/MSBuild/Inno Setup
+  toolchain used by EmilyDesk. Run Build.cmd on Windows. Its normal compile,
+  Designer save/apply verification, gallery verification, installer build, and
+  release checks remain authoritative before sharing a new installer.
+
+TEST ORDER ON WINDOWS
+1. Keep the current known-good EmilyDeskInstaller.exe as rollback.
+2. Run Build.cmd from this working folder.
+3. Install/upgrade the generated Build 1331 installer.
+4. Open Dashboard > Settings > Import Theme and choose EmberGlow.emilytheme.
+5. Verify Ember Glow in Gallery, Weather, Calendar, Clock, Recycle Bin,
+   Designer, and Dock Settings at 100% scale and all four screen edges.
+6. Replace EmberGlow.emilytheme once and confirm personal edits remain.

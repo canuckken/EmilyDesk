@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="420" viewBox="0 0 300 420">
+  <defs><linearGradient id="key" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4c4d"/><stop offset="1" stop-color="#17191a"/></linearGradient><style>text{font-family:Georgia,serif;fill:#ecdab1}.small{font-family:'Segoe UI',sans-serif}</style></defs>
+  <image xlink:href="art-deco-calculator-skin.png" width="300" height="420"/>
+  <text x="150" y="69" text-anchor="middle" font-size="15" font-weight="bold">ART DECO</text><text x="150" y="79" text-anchor="middle" font-size="7" font-weight="bold" class="small">CALCULATOR</text>
+  <rect x="46" y="84" width="208" height="52" rx="10" fill="#080a0b" stroke="#d6a54d" stroke-width="2"/><text x="240" y="118" text-anchor="end" font-size="28" font-weight="bold">0</text>
+  <g fill="url(#key)" stroke="#c79a48" stroke-width="1.2" font-size="17" text-anchor="middle">
+    <rect x="46" y="145" width="46" height="34" rx="7"/><rect x="99" y="145" width="46" height="34" rx="7"/><rect x="152" y="145" width="46" height="34" rx="7"/><rect x="205" y="145" width="46" height="34" rx="7"/>
+    <rect x="46" y="187" width="46" height="34" rx="7"/><rect x="99" y="187" width="46" height="34" rx="7"/><rect x="152" y="187" width="46" height="34" rx="7"/><rect x="205" y="187" width="46" height="34" rx="7"/>
+    <rect x="46" y="229" width="46" height="34" rx="7"/><rect x="99" y="229" width="46" height="34" rx="7"/><rect x="152" y="229" width="46" height="34" rx="7"/><rect x="205" y="229" width="46" height="34" rx="7"/>
+    <rect x="46" y="271" width="46" height="34" rx="7"/><rect x="99" y="271" width="46" height="34" rx="7"/><rect x="152" y="271" width="46" height="34" rx="7"/><rect x="205" y="271" width="46" height="34" rx="7"/>
+    <rect x="46" y="313" width="46" height="34" rx="7"/><rect x="99" y="313" width="46" height="34" rx="7"/><rect x="152" y="313" width="99" height="34" rx="7"/>
+  </g>
+  <g font-size="17" text-anchor="middle"><text x="69" y="168">C</text><text x="122" y="168">+/−</text><text x="175" y="168">%</text><text x="228" y="168">÷</text><text x="69" y="210">7</text><text x="122" y="210">8</text><text x="175" y="210">9</text><text x="228" y="210">×</text><text x="69" y="252">4</text><text x="122" y="252">5</text><text x="175" y="252">6</text><text x="228" y="252">−</text><text x="69" y="294">1</text><text x="122" y="294">2</text><text x="175" y="294">3</text><text x="228" y="294">+</text><text x="69" y="336">0</text><text x="122" y="336">.</text><text x="202" y="336">=</text></g>
+</svg>

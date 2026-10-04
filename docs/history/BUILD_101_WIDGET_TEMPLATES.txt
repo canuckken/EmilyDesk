@@ -1,0 +1,80 @@
+EmilyDesk build 101 - Widget Templates and Drag-and-Drop Designer
+Installer version: 2.10.27
+
+BASELINE
+Built only from EmilyDesk_PersonalDesignerLayouts_v100.zip.
+The ten bundled personal layouts (505 layers), their import backups, all theme
+artwork, docks, and window-placement/snapping code are unchanged.
+
+INSTALL
+Extract the ZIP into a new folder, open its top-level EmilyDesk folder and run
+Build.cmd. Install the resulting build as usual. Do not copy an older working
+folder over this one. Existing personal layouts continue to override defaults.
+
+CREATE A DESIGN
+1. Dashboard > Widget Templates.
+2. Choose Clock, Calendar, Weather or Recycle Bin, then a starting theme.
+3. Drop PNG files from Windows File Explorer onto the Designer canvas.
+4. Choose Set as widget background, Add image layers, Replace image, or
+   Add and connect as. Multiple PNGs can be added in one drop (up to 32).
+5. Right-click a layer > Connect as to assign or change its role. Clock hands
+   connect as Hour hand, Minute hand or Second hand. Connecting a replacement
+   removes the previous hand for that role so two hands do not run together.
+6. File > Save saves a separate .emilyproject.json design project.
+7. When ready, Project > Apply project to widget asks for confirmation and
+   applies only to the selected widget/theme. Its current saved layout is
+   backed up next to the project before replacement. Open that theme's widget
+   from the Gallery if it is not already running.
+
+PROJECT SAFETY AND SCOPE
+Creating, opening and saving a template project does not publish a live layout.
+Apply is a separate, explicit action. Closing a modified project offers Save,
+Discard or Cancel. Save As creates another project copy.
+
+Projects customize the existing widget/theme slots. This build does not add
+unlimited independently running custom widget instances or new Gallery IDs.
+Existing live-widget editing and saving still work as before.
+
+Keep the .emilyproject.json file together with its matching .assets folder when
+moving or sharing it. The folder contains exact copies of imported PNG artwork
+and custom weather-icon packs. Built-in theme assets come with EmilyDesk.
+Applying also copies imported artwork into persistent Designer assets, so an
+applied widget does not rely on the project folder remaining in place.
+Previous project files are retained as .previous on subsequent saves.
+
+ARTWORK AND LAYOUT
+Use PNG images with real alpha transparency. Background replacement retains
+the canvas dimensions and every layer's position/size. It does not run an
+automatic layout. Custom backgrounds replace the original theme frame rather
+than painting a second frame beneath transparent pixels. Use Theme Background
+restores the standard frame. Resizing a background image does not reposition
+the text, dividers or hands.
+
+Clock-hand PNGs should point upward. Hands automatically align to the shared
+centre pivot; drag the Centre pivot to move that centre. Use the Length/Width
+properties to fit hands to the dial. The existing hand convention reserves a
+13-design-pixel tail below the pivot (17 for seconds); transparent padding can
+be used when preparing artwork. Connected hand movement uses this common
+pivot, rather than the image's original drop position.
+
+Calendar templates include date cells and working month navigation. Weather
+templates include live fields and forecast columns. The Connect as menu assigns
+forecast indices automatically; layer names do not need to be typed manually.
+A PNG assigned to a weather icon is a fixed artwork override. For condition-
+dependent icons, choose/import a complete weather icon pack from Weather Icons.
+
+Recycle Bin templates have Empty Bin and Full Bin views in the Edit selector.
+Connect artwork to the appropriate state; existing Windows bin actions,
+drag-to-recycle, context menus, empty/full detection and saved theme remain.
+No count box or caption has been added.
+
+CHECKS
+Build.cmd now includes isolated project save/reopen checks for all 28 template
+routes, preservation of live layouts, artwork copying, hand-role replacement,
+forecast binding, background geometry/transparency and empty/full bin rendering.
+These join the existing 21-widget save/apply and architecture checks.
+
+This package was source-checked and compared against v100. Windows compilation,
+the new executable regression checks, and interactive drag/drop/rendering could
+not be run in the Linux preparation environment. Build.cmd runs the Windows
+checks; please test creating a clock project, reopening it, and applying it.

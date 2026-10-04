@@ -1,0 +1,95 @@
+EmilyDesk Build 100 - Layout Import Record
+
+The newest ZIP-entry modification time was used for each filename.
+No layers or settings were merged between different saved revisions.
+All 505 active layers retain their supplied positions and styling.
+
+art-deco-weather.layout.json
+  Source: DesignerLayouts (2).zip
+  Saved: 2026-09-01 02:30:00 (ZIP local time)
+  Source SHA256: d72e0bda0cad3ae38bad84a6c272cc55f6584cade8977a8d24357c5cbd8aa3e6
+  Layers: 55
+  Packaged SHA256: d72e0bda0cad3ae38bad84a6c272cc55f6584cade8977a8d24357c5cbd8aa3e6
+  Status: active bundled default.
+
+botanical-weather.v2.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 21:06:22 (ZIP local time)
+  Source SHA256: c22d4a6c1d694d1dd321866b1aba05aab5f20e449ad0d5fcad9783baf884d5a5
+  Layers: 61
+  Packaged SHA256: c22d4a6c1d694d1dd321866b1aba05aab5f20e449ad0d5fcad9783baf884d5a5
+  Status: active bundled default.
+
+industrial-calendar.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 13:45:36 (ZIP local time)
+  Source SHA256: 2dc82c80dee6865250c2d07f16ec168cf8985fbf6caa63af95a5ff4aa94ccdb1
+  Layers: 54
+  Packaged SHA256: 2dc82c80dee6865250c2d07f16ec168cf8985fbf6caa63af95a5ff4aa94ccdb1
+  Status: active bundled default.
+
+industrial-clock.layout.json
+  Source: DesignerLayouts (2).zip
+  Saved: 2026-08-31 02:14:38 (ZIP local time)
+  Source SHA256: d3b881aa058990f6c30dc3708478c903e9746d69c3b2351670a13d7980dd832c
+  Layers: 5
+  Packaged SHA256: d3b881aa058990f6c30dc3708478c903e9746d69c3b2351670a13d7980dd832c
+  Status: active bundled default.
+
+industrial-weather.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 14:13:58 (ZIP local time)
+  Source SHA256: a6bfca6bdf730b6f85b72f0d08bfe625234ab9dc47346d76913ef0e94c54df04
+  Layers: 54
+  Packaged SHA256: a6bfca6bdf730b6f85b72f0d08bfe625234ab9dc47346d76913ef0e94c54df04
+  Status: active bundled default.
+
+steampunk-calendar.layout.json
+  Source: DesignerLayouts (2).zip
+  Saved: 2026-08-31 03:03:08 (ZIP local time)
+  Source SHA256: de5d25730e41ecec9ecade70038c7b8a6ef9bba6232eb41aeab6f172ce9af2c1
+  Layers: 54
+  Packaged SHA256: de5d25730e41ecec9ecade70038c7b8a6ef9bba6232eb41aeab6f172ce9af2c1
+  Status: active bundled default.
+
+steampunk-weather.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 13:51:16 (ZIP local time)
+  Source SHA256: dcea1c1369be24e3ec8e6c1888fd595faa825d465eeaf787d5d597ce1b9bb099
+  Layers: 47
+  Packaged SHA256: ff45d0be5c6578776fd9d849fa4eeebf5484001e79d3cf88140ac3b85e5ece71
+  Status: active bundled default.
+  Only change: WeatherIconPack selects built-in Steampunk instead of a PC-specific absolute path.
+
+vintage-calendar.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 21:11:02 (ZIP local time)
+  Source SHA256: 7cf2caa509fd82b8f015e712d7845dfa71bcf29380d5c7720a8c5f8aab18cdc3
+  Layers: 69
+  Packaged SHA256: 7cf2caa509fd82b8f015e712d7845dfa71bcf29380d5c7720a8c5f8aab18cdc3
+  Status: active bundled default.
+
+woodland-calendar.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 13:39:54 (ZIP local time)
+  Source SHA256: 5e3339671be3c529499af14cd183e41a01bfe76326008ea258aeb898ebce2355
+  Layers: 54
+  Packaged SHA256: 5e3339671be3c529499af14cd183e41a01bfe76326008ea258aeb898ebce2355
+  Status: active bundled default.
+
+woodland-weather.layout.json
+  Source: DesignerLayouts (2).zip
+  Saved: 2026-08-28 18:02:56 (ZIP local time)
+  Source SHA256: b8d8eb924612da513f7322ec2312a0f9a55a2730f2e02c061447c2e5afe085c3
+  Status: backup only; superseded by woodland-weather.v2.layout.json.
+
+woodland-weather.v2.layout.json
+  Source: DesignerLayouts(1).zip
+  Saved: 2026-09-01 21:02:28 (ZIP local time)
+  Source SHA256: 06d7996fdf4a81eb53ff356e6936f1bd758c2587cf89d81aa0c782ae14102c63
+  Layers: 52
+  Packaged SHA256: 06d7996fdf4a81eb53ff356e6936f1bd758c2587cf89d81aa0c782ae14102c63
+  Status: active bundled default.
+
+Both original uploaded ZIPs are retained unchanged in LayoutImportBackup.
+Existing personal layouts remain authoritative; the package supplies defaults only.

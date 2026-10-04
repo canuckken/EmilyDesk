@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4CC93D4-F605-47F7-8B46-EA8B8E3D6B41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EmilyDesk.Designer</RootNamespace>
+    <AssemblyName>EmilyDesk.Designer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationIcon>EmilyDeskIconV2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel><PlatformTarget>AnyCPU</PlatformTarget></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel><PlatformTarget>AnyCPU</PlatformTarget></PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Drawing"/><Reference Include="System.Windows.Forms"/><Reference Include="System.Web.Extensions"/></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XWidgetReborn.Shared\XWidgetReborn.Shared.csproj"><Project>{A1D5BD88-8377-48E2-A47C-C2FC55118A01}</Project><Name>EmilyDesk.Shared</Name></ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.WidgetSdk\XWidgetReborn.WidgetSdk.csproj"><Project>{B9ABAD31-6D3E-43EA-AE3E-A9178A94E616}</Project><Name>EmilyDesk.WidgetSdk</Name></ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.Widgets.Weather\XWidgetReborn.Widgets.Weather.csproj"><Project>{79B47FA4-E33D-4D5F-B86E-00A7429B9545}</Project><Name>EmilyDesk.Widgets.Weather</Name></ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.Widgets.Clock\XWidgetReborn.Widgets.Clock.csproj"><Project>{61556D3C-74F7-49B3-B348-7EC942DD1CDD}</Project><Name>EmilyDesk.Widgets.Clock</Name></ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.Widgets.Calendar\XWidgetReborn.Widgets.Calendar.csproj"><Project>{A37DEFE4-D29D-45C1-863E-1F0454E7D180}</Project><Name>EmilyDesk.Widgets.Calendar</Name></ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.Widgets.RecycleBin\XWidgetReborn.Widgets.RecycleBin.csproj"><Project>{F6BBCA31-1B70-4DBA-86A5-762E7FD25136}</Project><Name>EmilyDesk.Widgets.RecycleBin</Name></ProjectReference>
+  </ItemGroup>
+  <ItemGroup><Compile Include="AssemblyInfo.cs"/><Compile Include="DesignerProgram.cs"/><Compile Include="DesignerLayout.cs"/><Compile Include="DesignerLayoutStore.cs"/><Compile Include="DesignerCanvas.cs"/><Compile Include="DesignerForm.cs"/><Compile Include="FriendlyInspector.cs"/><Compile Include="VisualColorPickerDialog.cs"/><Compile Include="DesignerWallpaperManager.cs"/></ItemGroup>
+  <ItemGroup><Compile Include="DesignerSaveVerification.cs" /></ItemGroup>
+  <ItemGroup><Content Include="EmilyDeskIconV2.ico"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+  <ItemGroup><Compile Include="EditableThemeLayouts.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="DesignerLayerVerification.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="WoodlandPresentationVerification.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="BundledLayoutVerification.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="TemplatePickerForm.cs"/><Compile Include="TemplateProjects.cs"/><Compile Include="ArtworkDragDrop.cs"/><Compile Include="TemplateProjectVerification.cs"/></ItemGroup>
+  <ItemGroup><Compile Include="RecycleBinTemplate.cs"/></ItemGroup>
+</Project>

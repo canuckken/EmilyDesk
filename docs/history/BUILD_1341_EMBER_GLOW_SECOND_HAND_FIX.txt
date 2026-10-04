@@ -1,0 +1,14 @@
+EMILYDESK BUILD 1341 — EMBER GLOW SECOND-HAND FIX
+=================================================
+
+This build corrects the remaining Ember Glow second-hand geometry.
+
+- The second hand no longer extends behind or past the centre cap.
+- Its forward section is longer and reaches the seconds markers without
+  touching the glowing rim.
+- Its image pivot remains aligned with the hour hand, minute hand, and centre
+  cap at 180,180.
+- Ember Glow 1.2.2 is included automatically in fresh installs and upgrades.
+- All other widgets, themes, layouts, and settings remain unchanged.
+
+Run Build.cmd on Windows, then install Output\EmilyDeskInstaller.exe.

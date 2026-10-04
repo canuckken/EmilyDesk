@@ -1,0 +1,11 @@
+EmilyDesk Build 1350 - Display-Wake Position Stability
+
+Windows can adjust borderless layered windows by a few pixels while a monitor
+is powering back on. EmilyDesk now listens for monitor-power resume and display
+configuration changes, then reapplies each native widget's saved visible
+position after Windows has finished restoring the display.
+
+The correction runs twice after a wake notification so a late Windows
+adjustment cannot leave Weather and Calendar misaligned. It does not change
+normal dragging, smooth edge snapping, theme-specific artwork anchors, or the
+positions selected by the user.

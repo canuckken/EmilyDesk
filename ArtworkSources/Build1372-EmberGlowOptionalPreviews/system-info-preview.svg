@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550" height="327" viewBox="0 0 550 327">
+  <defs>
+    <linearGradient id="meter" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffad36"/><stop offset="0.55" stop-color="#e46918"/><stop offset="1" stop-color="#7c270b"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="1.7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>text{font-family:'Segoe UI',sans-serif;fill:#f6dfbd}.serif{font-family:Georgia,serif}.label{fill:#dc8131}.muted{fill:#b58b6c}</style>
+  </defs>
+  <image xlink:href="ember-glow-system-info-skin.png" width="550" height="327"/>
+  <text x="275" y="61" text-anchor="middle" font-size="18" font-weight="bold" class="serif">SYSTEM INFORMATION</text><line x1="275" y1="76" x2="275" y2="282" stroke="#9d4617"/>
+  <g font-size="12" font-weight="bold" class="label"><text x="54" y="96">CPU</text><text x="54" y="140">MEMORY</text><text x="54" y="184">SYSTEM DISK</text><text x="54" y="228">SYSTEM</text><text x="294" y="96">CPU TEMPERATURE</text><text x="294" y="177">NETWORK</text><text x="294" y="249">UPTIME</text></g>
+  <g font-size="12" font-weight="bold" text-anchor="end"><text x="266" y="96">9%</text><text x="266" y="140">6.2 GB / 15.9 GB</text><text x="266" y="184">54% used</text></g>
+  <g fill="#160d0a" stroke="#a14b19"><rect x="54" y="108" width="212" height="9" rx="4"/><rect x="54" y="152" width="212" height="9" rx="4"/><rect x="54" y="196" width="212" height="9" rx="4"/></g>
+  <g fill="url(#meter)" filter="url(#glow)"><rect x="54" y="108" width="19" height="9" rx="4"/><rect x="54" y="152" width="82" height="9" rx="4"/><rect x="54" y="196" width="115" height="9" rx="4"/></g>
+  <text x="54" y="249" font-size="11" font-weight="bold">Windows 10 IoT Enterprise LTSC</text><text x="54" y="271" font-size="11" font-weight="bold" class="muted">DESKTOP-EE0FDJR · 64-bit</text>
+  <text x="294" y="137" font-size="36" font-weight="bold" class="serif">36°C</text><text x="294" y="157" font-size="11" class="muted">Core Temp · Core #1</text><text x="294" y="201" font-size="10" class="muted">DOWN</text><text x="347" y="201" font-size="12" font-weight="bold">1.1 KB/s</text><text x="294" y="225" font-size="10" class="muted">UP</text><text x="347" y="225" font-size="12" font-weight="bold">104 B/s</text><text x="294" y="271" font-size="12" font-weight="bold">2d 13h 12m</text>
+</svg>

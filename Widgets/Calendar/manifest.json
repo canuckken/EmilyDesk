@@ -1,0 +1,18 @@
+{
+  "id": "native.calendar",
+  "name": "Calendar",
+  "description": "The official native monthly calendar for EmilyDesk.",
+  "version": "1.0.0",
+  "author": "EmilyDesk Community Project",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "assembly": "XWidgetReborn.Widgets.Calendar.dll",
+  "type": "XWidgetReborn.Widgets.Calendar.NativeCalendarWidget",
+  "minimumSdkVersion": "2.7.1.0",
+  "minimumEngineVersion": "2.7.4.0",
+  "category": "Calendar",
+  "official": true,
+  "bundled": true,
+  "capabilities": [ "settings", "styles", "themes", "navigation", "scale", "opacity" ],
+  "enabledByDefault": false
+}

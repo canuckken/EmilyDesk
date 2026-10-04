@@ -1,0 +1,15 @@
+EmilyDesk Build 1362
+
+- Clock preview artwork is generated from the current Designer canvas rather
+  than an older clock-renderer instance.
+- Woodland Nature clock preview cards now use the currently saved clock hands.
+- Bundles the current Woodland custom hour and minute hand artwork with
+  portable paths that work on new installations.
+- Includes the latest supplied Calendar, Weather, clock, and optional-widget
+  Designer layouts as the bundled defaults.
+- Widget Dock previews are re-resolved and decoded each time the dock opens,
+  preventing cached artwork from surviving a Designer save.
+- Retains the approved compact all-widget dock from Build 1361.
+- Retains automatic linked dragging of Calendar weekday and date layers.
+- Retains the corrected X, Y, Width, and Height Designer field alignment.
+- Build identifier updated to 1362.

@@ -1,0 +1,25 @@
+EMILYDESK BUILD 1345
+====================
+
+This build includes the supplied DesignerLayouts(3).zip revisions as the new
+shipped layout defaults.
+
+Botanical Nature clock changes:
+
+1. The second hand now uses the same forest-green enamel and antique-brass
+   colors as the hour and minute hands.
+2. The second hand reaches the seconds markers without touching the bezel.
+3. The minute hand is one logical desktop pixel wider at 100% scale.
+
+Layout packaging:
+
+- Eight built-in layout files are bundled under Assets\DesignerLayouts.
+- The two Ember Glow layouts are bundled inside ThemePackages\EmberGlow.
+- Machine-specific paths in the supplied Woodland clock and Steampunk weather
+  files were removed from the shipped copies. Their standard bundled artwork
+  is selected automatically on every computer.
+- The Woodland clock is now included in bundled-layout verification.
+
+Existing personal layouts, assets, weather settings, widget positions, and
+other user settings remain untouched and continue to take precedence during
+an upgrade.

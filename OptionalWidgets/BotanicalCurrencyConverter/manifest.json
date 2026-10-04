@@ -1,0 +1,18 @@
+{
+  "id": "utility.botanical-currency-converter",
+  "name": "Botanical Nature Currency Converter",
+  "description": "A searchable Botanical Nature currency converter with PHP and 165+ currencies.",
+  "version": "1.0.0",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.BotanicalCurrencyConverter.dll",
+  "type": "EmilyDesk.Widgets.CurrencyConverter.CurrencyConverterWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [ "currency", "network", "searchable-currencies", "php", "designer", "theme-switching", "scale", "opacity" ]
+}

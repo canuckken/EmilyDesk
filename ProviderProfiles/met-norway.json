@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "met-norway",
+  "displayName": "MET Norway",
+  "adapter": "met-no-locationforecast-v2",
+  "enabled": true,
+  "requiresApiKey": false,
+  "baseUrl": "https://api.met.no/weatherapi/locationforecast/2.0/compact",
+  "websiteUrl": "https://www.yr.no/",
+  "query": {}
+}

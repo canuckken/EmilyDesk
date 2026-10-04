@@ -1,0 +1,74 @@
+EmilyDesk v96 / 2.10.22 - Designer save/apply and all realistic Recycle Bins
+
+BASELINE
+This complete project continues ONLY the accepted v95 project.
+Baseline: EmilyDesk_RealisticWoodlandRecycleBin_v95.zip
+SHA-256: 3ba768c637bfcb9d7cf4f7bea3cde4a8862e6cb0c2dc82c30778ff67baa263cf
+No older source was restored or merged. Previous release notes are historical.
+
+DESIGNER FIXES
+- Woodland and Botanical calendars now read their own saved layouts instead
+  of bypassing them. Woodland no longer saves into Industrial's calendar file.
+- Nature clocks also have independent theme files. Clock layouts refresh when
+  saved, without closing/restarting widgets or changing their position.
+- Every editable theme/widget pair uses the same live-layout routing and cache
+  rules. New saves are atomic, user-local writes. The newest shared/local save
+  is used, so an old shared copy no longer hides a successful local save.
+- Save As exports the requested file AND publishes the live theme layout.
+- Save requests a redraw of the running clock, calendar and weather widgets.
+  This does not restart them or change approved dragging/snapping code.
+- Calendar rendering honours added text, images/dividers, positions, fonts,
+  colours and visibility. Deleting/hiding a calendar button removes its hit area.
+- The existing Modern/Vintage snapshot-based designers and Art Deco clock/
+  calendar snapshot designers now apply their editable overlay layers at runtime.
+  Their original artwork remains a reference background, not separate editable
+  built-in layers. This release does not convert that artwork into new layers.
+- Nature clock hand sizing and custom hand/pivot images apply to live widgets.
+- Saved weather deletions, custom main icons, added Art Deco dividers and
+  theme backgrounds are respected. Reopening no longer restyles generic weather
+  text or resets saved nature backgrounds/divider positions.
+- Preview rendering does not paint saved snapshot overlays a second time.
+
+EXISTING WOODLAND CALENDAR EDITS
+The old Designer could write Woodland edits to industrial-calendar.layout.json.
+That file is retained, but cannot safely be auto-assigned to Woodland: it may
+contain genuine Industrial edits. To recover those edits, open Woodland Calendar
+in Designer, choose File > Open, and select the old file in either:
+  %ProgramData%\EmilyDesk\DesignerLayouts
+  %LocalAppData%\EmilyDesk\DesignerLayouts
+Then Save. It now publishes woodland-calendar.layout.json without overwriting
+Industrial. Choose Widget > Use Theme Background if the imported file shows the
+Industrial frame. Otherwise edit Woodland normally and Save.
+
+RECYCLE BINS
+The approved realistic empty/full PNGs are included for all seven themes.
+Woodland's accepted barrel images are unchanged. Caption boxes, titles, count/
+size text and the obsolete count setting have been removed. The artwork stays
+at the same logical size; the unused caption area is removed from the window.
+Open, Windows-confirmed empty, drop-to-recycle, live empty/full state, theme,
+scale, opacity, placement and saved settings remain. Desktop bin ICO replacement
+is unchanged. All docks and approved snapping source remain unchanged.
+
+BUILD AND TEST
+Extract into a new location, retaining the top-level EmilyDesk folder. Run
+EmilyDesk\Build.cmd and use the newly generated build. Do not combine it with
+an older working folder. Existing user data/layout files are not deleted.
+
+Build.cmd now runs an isolated Designer save/render verification before
+packaging. It checks all 21 clock/calendar/weather theme combinations: unique
+filenames, save/export, live-refresh events, added text/images/dividers, font/
+colour changes, visibility, deletion and reopen. Applicable button styling is
+also checked. Tests use temporary layouts and do not send live-engine commands,
+start weather fetches or alter your personal layouts. A failure stops the build
+and records BuildLogs\designer-save-error.txt; successful results are recorded
+in BuildLogs\designer-save-tests.txt. Existing snapping/theme checks remain.
+
+Please first test Woodland Calendar: change the month title's size/colour or
+position, add a text layer, Save, then reopen Designer. Check the running widget
+updates without moving. Check a button style and hidden layer in another theme.
+
+VALIDATION LIMIT
+Source/package integrity and approved PNG transparency are checked here. The
+Windows/.NET compiler and desktop are not available in this environment, so
+neither the Windows build nor the new runtime tests were executed here. The
+Windows build is a required verification step, not a claimed completed test.

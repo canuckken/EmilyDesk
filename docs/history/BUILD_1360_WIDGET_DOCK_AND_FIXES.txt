@@ -1,0 +1,16 @@
+EmilyDesk Build 1360
+
+- Added the approved slide-up Widget Dock with every bundled theme variant
+  and every installed optional widget, Gallery previews, search, categories,
+  running indicators, and exact widget/theme launching.
+- Tray double-click and a second EmilyDesk launch now toggle the Widget Dock.
+- Added explicit Open Dashboard and Open Widget Dock tray commands.
+- EmilyDesk no longer opens the Dashboard automatically at startup.
+- Normal widgets are re-anchored below the Dashboard, including Calendar.
+- Added dock colour tint and lighter/darker shade controls.
+- Changing one application-dock shortcut icon no longer reloads or replaces
+  the other shortcut icons; Windows shortcut icon locations are preserved.
+- Calendar weekday and date layers can move as one linked Designer group.
+- Calculator now uses a shiny brass title plate and version 1.1.3.
+- System Information identifies the hottest Core Temp core and is version 1.0.4.
+- Build identifier updated to 1360.

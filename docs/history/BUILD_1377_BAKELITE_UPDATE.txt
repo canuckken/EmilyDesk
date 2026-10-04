@@ -1,0 +1,9 @@
+EmilyDesk Build 1377 Bakelite source update
+
+Extract this ZIP directly into the EmilyDesk working folder, then run Build.cmd on Windows. The ZIP has no EmilyDesk parent folder.
+
+Ember Glow uses darker radio-matched cabinet artwork and clock hands with a round center cap. Previous copper theme is preserved as Copper Glow. Copper Glow wallpaper and weather icons are copied from existing Ember Glow assets during Build.ps1. Optional calculator, currency converter, and system information skins are included.
+
+The separate EmberDial source update replaces Assets/radio.png with the cleaned radio artwork and removes the extra PRESET label from MainWindow.xaml while preserving the interactive preset hotspot. Extract it directly into the EmberDial project directory and build that project separately. No EmberDial EXE is needed for the graphic replacement.
+
+This archive contains source changes; a Windows installer must be produced by Build.cmd on a Windows development machine.

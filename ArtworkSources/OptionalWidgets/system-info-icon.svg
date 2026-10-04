@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+  <defs><linearGradient id="meter" x2="1"><stop stop-color="#f2b344"/><stop offset="1" stop-color="#934a1d"/></linearGradient></defs>
+  <g transform="translate(8 49) scale(.4363636)">
+    <image xlink:href="../../OptionalWidgets/SystemInfo/steampunk-system-info-skin.png" width="550" height="363"/>
+    <text x="275" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="25" font-weight="bold" fill="#492612">SYSTEM INFO</text>
+    <g fill="#d3a458" font-family="Segoe UI,Arial" font-size="19" font-weight="bold"><text x="62" y="104">CPU</text><text x="62" y="169">MEMORY</text><text x="62" y="234">DISK</text></g>
+    <g fill="#20120e" stroke="#754422" stroke-width="2"><rect x="62" y="119" width="258" height="16" rx="8"/><rect x="62" y="184" width="258" height="16" rx="8"/><rect x="62" y="249" width="258" height="16" rx="8"/></g>
+    <g fill="url(#meter)"><rect x="62" y="119" width="95" height="16" rx="8"/><rect x="62" y="184" width="126" height="16" rx="8"/><rect x="62" y="249" width="108" height="16" rx="8"/></g>
+    <text x="348" y="130" font-family="Georgia,serif" font-size="50" font-weight="bold" fill="#ffefc9">58°C</text><text x="348" y="161" font-family="Segoe UI,Arial" font-size="18" font-weight="bold" fill="#d3a458">CPU TEMP</text><text x="348" y="218" font-family="Segoe UI,Arial" font-size="21" font-weight="bold" fill="#ffefc9">2.4 MB/s</text><text x="348" y="246" font-family="Segoe UI,Arial" font-size="17" fill="#b78952">NETWORK</text>
+  </g>
+</svg>

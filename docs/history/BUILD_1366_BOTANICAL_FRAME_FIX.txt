@@ -1,0 +1,13 @@
+EmilyDesk Build 1366
+====================
+
+Botanical Nature frame correction
+----------------------------------
+- Calendar and Weather now use a thicker sage-and-ivory outer frame matching
+  the approved Botanical optional widgets.
+- The application dock uses a thinner border matching those optional widgets.
+- The dock's rounded window region now follows the Botanical artwork and no
+  longer exposes black corner pixels.
+
+This is an EmilyDesk engine and Dashboard update. Run Build.cmd on Windows and
+install Build 1366. The optional widgets do not need to be imported again.

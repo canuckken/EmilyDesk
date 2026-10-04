@@ -1,0 +1,19 @@
+EmilyDesk Build 1370
+====================
+
+This build replaces the approximated Art Deco optional-widget frames with
+frames generated directly from the approved main Art Deco calendar artwork.
+The Calculator, Currency Converter, and System Information widgets now share
+the main widgets' exact stepped arch/fan geometry and bronze-gold palette.
+
+The pale title plaques were removed, the compact layouts were rebalanced,
+and all related Gallery/Widget Dock previews and icons were regenerated.
+
+Art Deco optional widget package version: 1.0.3
+
+Expected Windows build outputs:
+  Output\OptionalWidgets\ArtDecoCalculator-1.0.3.emilywidget
+  Output\OptionalWidgets\ArtDecoCurrencyConverter-1.0.3.emilywidget
+  Output\OptionalWidgets\ArtDecoSystemInformation-1.0.3.emilywidget
+
+Importing 1.0.3 replaces earlier Art Deco optional-widget versions.

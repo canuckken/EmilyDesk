@@ -1,0 +1,26 @@
+Build 98 offline validation
+
+PASS: Exact Build 97 baseline SHA-256:
+47dc8d73cf0e094c8dae821ec81cdb552b892fa704275bdafec35a878cdd60b0
+PASS: No original files removed. Six original files intentionally changed:
+      Weather output-size selection, Windows verification registration, and
+      application/installer version declarations.
+PASS: All 318 artwork files are byte-identical to Build 97.
+PASS: Calendar, clock, docks, bins, Designer editing/layout code, and snapping
+      implementation are byte-identical.
+PASS: All 12 protected weather rendering, layout, input and composition
+      methods are unchanged.
+PASS: Startup, theme switching and visible-edge anchoring use the new
+      Woodland-only output dimensions consistently.
+PASS: Other themes retain their previous output size and edge anchors.
+PASS: Calculated 100% visible artwork sizes:
+      Woodland weather: 502.52 x 309.18 pixels.
+      Woodland calendar: 502.67 x 309.01 pixels.
+PASS: 28 scale/DPI combinations (50-200% widget scale, 100-200% DPI), including
+      inclusive render bounds: maximum size difference 0.94 pixels.
+PASS: 12 project XML files and all 109 compile entries resolve.
+PASS: C# source delimiter checks.
+PASS: New Windows size/layout checks are registered in normal Build.cmd tests.
+
+NOT RUN HERE: Windows compilation, executable tests, interactive desktop QA.
+Actual desktop behavior still needs testing on Windows.

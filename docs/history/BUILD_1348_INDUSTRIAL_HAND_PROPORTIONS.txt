@@ -1,0 +1,18 @@
+EMILYDESK BUILD 1348
+====================
+
+This build applies the approved proportional clock-hand treatment to the
+Industrial theme.
+
+At 100% scale, the approximate visible artwork widths are:
+
+- Hour hand:   11.0 pixels
+- Minute hand: 9.4 pixels
+- Second hand: 3.7 pixels
+
+The ivory hour hand is modestly wider, the ivory minute hand is close to the
+previous hour-hand width, and the amber second hand is now clearly visible
+while remaining the finest hand.
+
+Hand lengths, centre pivots, dial geometry, all ten supplied Designer layouts,
+personal settings, and every non-Industrial theme remain unchanged.

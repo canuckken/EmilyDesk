@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+<Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F93EF7AE-A85B-47D7-9D76-E5DB8B28F944}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XWidgetReborn</RootNamespace>
+    <AssemblyName>EmilyDesk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationIcon>EmilyDeskIconV2.ico</ApplicationIcon>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DashboardProgram.cs" />
+    <Compile Include="DragDiagnostics.cs" />
+    <Compile Include="EmilyDeskDock.cs" />
+    <Compile Include="EmilyDeskDesignTokens.cs" />
+    <Compile Include="GalleryWidgetItem.cs" />
+    <Compile Include="MainForm.cs" />
+    <Compile Include="RecycleBinIconManager.cs" />
+    <Compile Include="VirtualGalleryDiagnosticForm.cs" />
+    <Compile Include="VirtualWidgetManagerForm.cs" />
+    <Compile Include="WallpaperManager.cs" />
+    <Compile Include="WallpaperSettingsForm.cs" />
+    <Compile Include="RebornApplicationContext.cs" />
+    <Compile Include="Stage4UiVerification.cs" />
+    <Compile Include="Stage5ThemeVerification.cs" />
+    <Compile Include="OptionalWidgetPreviewPublisher.cs" />
+    <Compile Include="ThemePackageInstaller.cs" />
+    <Compile Include="WidgetConverter.cs" />
+    <Compile Include="WidgetGalleryCard.cs" />
+    <Compile Include="WidgetManagerForm.cs" />
+    <Compile Include="WidgetLayerMenuFactory.cs" />
+    <Compile Include="WidgetLauncherDock.cs" />
+    <Compile Include="WidgetPreviewResolver.cs" />
+    <Compile Include="WidgetPackageInstaller.cs" />
+    <Compile Include="WidgetPackageUi.cs" />
+    <Compile Include="LegacyWidgetPackageInstaller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XWidgetReborn.Shared\XWidgetReborn.Shared.csproj">
+      <Project>{A1D5BD88-8377-48E2-A47C-C2FC55118A01}</Project>
+      <Name>XWidgetReborn.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.WeatherCore\XWidgetReborn.WeatherCore.csproj">
+      <Project>{7C423748-CF59-4BD0-A532-245B0941AD22}</Project>
+      <Name>XWidgetReborn.WeatherCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XWidgetReborn.WidgetSdk\XWidgetReborn.WidgetSdk.csproj">
+      <Project>{B9ABAD31-6D3E-43EA-AE3E-A9178A94E616}</Project>
+      <Name>XWidgetReborn.WidgetSdk</Name>
+    </ProjectReference>
+  </ItemGroup>
+<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

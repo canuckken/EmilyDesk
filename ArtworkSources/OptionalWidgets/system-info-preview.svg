@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="400" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="meter" x2="1"><stop stop-color="#f2b344"/><stop offset="1" stop-color="#934a1d"/></linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="#e8ebee"/>
+  <g transform="translate(45 18.5)">
+    <image xlink:href="../../OptionalWidgets/SystemInfo/steampunk-system-info-skin.png" width="550" height="363"/>
+    <text x="275" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="19.3" font-weight="bold" fill="#492612">SYSTEM INFORMATION</text>
+    <line x1="275" y1="66" x2="275" y2="298" stroke="#a0723b" stroke-opacity=".65"/>
+    <g font-family="Segoe UI,Arial">
+      <g fill="#d3a458" font-size="14" font-weight="bold"><text x="55" y="84">CPU</text><text x="55" y="131">MEMORY</text><text x="55" y="178">SYSTEM DISK</text><text x="55" y="223">SYSTEM</text><text x="293" y="84">CPU TEMPERATURE</text><text x="293" y="173">NETWORK</text><text x="293" y="247">UPTIME</text></g>
+      <g fill="#ffefc9" font-size="15.3" font-weight="bold" text-anchor="end"><text x="267" y="84">37%</text><text x="267" y="131">7.8 GB / 16.0 GB</text><text x="267" y="178">42% used</text></g>
+      <g fill="#21130f" stroke="#754422"><rect x="55" y="95" width="212" height="9" rx="4"/><rect x="55" y="142" width="212" height="9" rx="4"/><rect x="55" y="189" width="212" height="9" rx="4"/></g>
+      <g fill="url(#meter)"><rect x="55" y="95" width="78" height="9" rx="4"/><rect x="55" y="142" width="104" height="9" rx="4"/><rect x="55" y="189" width="89" height="9" rx="4"/></g>
+      <text x="55" y="243" fill="#ffefc9" font-size="12.7" font-weight="bold">Windows 10 IoT Enterprise LTSC</text><text x="55" y="265" fill="#b78952" font-size="12.7" font-weight="bold">EMILYDESK-PC • 64-bit</text>
+      <text x="293" y="126" font-family="Georgia,serif" font-size="36" font-weight="bold" fill="#ffefc9">58°C</text><text x="293" y="147" fill="#b78952" font-size="12.7">Core Temp • hottest core</text>
+      <text x="293" y="193" fill="#b78952" font-size="12.7">DOWN</text><text x="345" y="193" fill="#ffefc9" font-size="15.3" font-weight="bold">2.4 MB/s</text><text x="293" y="218" fill="#b78952" font-size="12.7">UP</text><text x="345" y="218" fill="#ffefc9" font-size="15.3" font-weight="bold">184 KB/s</text>
+      <text x="293" y="270" fill="#ffefc9" font-size="15.3" font-weight="bold">2d 6h 14m</text>
+    </g>
+  </g>
+</svg>

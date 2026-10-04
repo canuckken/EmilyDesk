@@ -1,0 +1,18 @@
+{
+  "id": "native.recyclebin",
+  "name": "Recycle Bin",
+  "description": "A fully functional themed Windows Recycle Bin widget.",
+  "version": "1.0.0",
+  "author": "EmilyDesk Community Project",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "assembly": "XWidgetReborn.Widgets.RecycleBin.dll",
+  "type": "XWidgetReborn.Widgets.RecycleBin.NativeRecycleBinWidget",
+  "minimumSdkVersion": "2.8.1.0",
+  "minimumEngineVersion": "2.7.4.0",
+  "category": "Desktop",
+  "official": true,
+  "bundled": true,
+  "capabilities": [ "themes", "open", "empty", "file-drop", "item-count", "scale", "opacity" ],
+  "enabledByDefault": false
+}

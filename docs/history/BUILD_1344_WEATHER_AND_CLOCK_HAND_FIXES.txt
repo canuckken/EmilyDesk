@@ -1,0 +1,19 @@
+EMILYDESK BUILD 1344
+====================
+
+This build corrects three regressions reported after Build 1343:
+
+1. Designer-added Botanical Nature weather metric text now renders with the
+   same one-line label/value format in the live widget. Only the three original
+   built-in compact metric blocks retain their intentional two-line layout.
+
+2. Botanical Nature now uses a visible dusty-rose PNG second hand. Its live
+   width and length are set independently of the Woodland hand so it remains
+   readable without touching the clock rim.
+
+3. Industrial now uses three dedicated transparent PNG hand assets matching
+   the approved mockup: warm ivory hour and minute hands, plus a thin amber
+   second hand. User-selected custom PNG hands remain authoritative.
+
+The build pipeline rejects missing or incorrectly sized clock-hand assets.
+No personal layouts, assets, weather settings, or other themes are removed.

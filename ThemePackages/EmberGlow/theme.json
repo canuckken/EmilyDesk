@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ember-glow",
+  "name": "Ember Glow",
+  "version": "1.2.8",
+  "description": "Dark Bakelite cabinets inspired by EmberDial, with subtle reflected edges and warm inner light.",
+  "surfaceTop": "#170906",
+  "surfaceBottom": "#100604",
+  "primaryText": "#F7E2BE",
+  "secondaryText": "#C89D67",
+  "accent": "#EE8E26",
+  "border": "#53372B",
+  "weekend": "#EE8E26",
+  "wallpaper": "wallpapers/ember-glow-wallpaper-1-3840x2160.png",
+  "assets": {
+    "weather": "assets/ember-glow-weather-skin.png",
+    "weatherDetails": "assets/ember-glow-weather-details-panel.png",
+    "calendar": "assets/ember-glow-calendar-skin.png",
+    "clock": "assets/ember-glow-clock-skin.png",
+    "hourHand": "assets/ember-glow-hour-hand.png",
+    "minuteHand": "assets/ember-glow-minute-hand.png",
+    "secondHand": "assets/ember-glow-second-hand-v2.png",
+    "recycleEmpty": "assets/ember-glow-recycle-bin-empty.png",
+    "recycleFull": "assets/ember-glow-recycle-bin-full.png",
+    "dock": "assets/ember-glow-dock-skin.png",
+    "wallpaper1Wide": "wallpapers/ember-glow-wallpaper-1-3840x2160.png",
+    "wallpaper1Tall": "wallpapers/ember-glow-wallpaper-1-3840x2400.png",
+    "wallpaper2Wide": "wallpapers/ember-glow-wallpaper-2-3840x2160.png",
+    "wallpaper2Tall": "wallpapers/ember-glow-wallpaper-2-3840x2400.png",
+    "weatherIcons": "weather-icons",
+    "galleryWeather": "assets/gallery-weather.png",
+    "galleryCalendar": "assets/gallery-calendar.png",
+    "galleryClock": "assets/gallery-clock.png",
+    "galleryRecycleBin": "assets/gallery-recycle-bin.png",
+    "galleryDock": "assets/gallery-dock.png"
+  },
+  "layouts": {
+    "weather": "layouts/ember-glow-weather.layout.json",
+    "calendar": "layouts/ember-glow-calendar.layout.json",
+    "clock": "layouts/ember-glow-clock.layout.json"
+  }
+}

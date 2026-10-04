@@ -1,0 +1,20 @@
+# Generated build and release files
+/BuildLogs/
+/Stage/
+/Output/
+/EmilyDeskBuild-*/
+**/bin/
+**/obj/
+.vs/
+*.suo
+*.user
+*.cache
+*.log
+*.tmp
+*.bak
+
+# Local settings and credentials
+.env
+.env.*
+*secrets*.json
+*apikeys*.json

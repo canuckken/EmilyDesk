@@ -1,0 +1,25 @@
+{
+  "id": "utility.ember-glow-calculator",
+  "name": "Ember Glow Calculator",
+  "description": "A dark copper and amber Ember Glow desktop calculator.",
+  "version": "1.0.12",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.EmberGlowCalculator.dll",
+  "type": "EmilyDesk.Widgets.Calculator.CalculatorWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [
+    "calculator",
+    "offline",
+    "designer",
+    "theme-switching",
+    "scale",
+    "opacity"
+  ]
+}

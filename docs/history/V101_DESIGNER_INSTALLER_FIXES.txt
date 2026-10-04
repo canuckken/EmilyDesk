@@ -1,0 +1,222 @@
+EmilyDesk v101 Designer and installer fixes - 2026-09-07
+
+BASELINE AND LAYOUTS
+- Sole source baseline: EmilyDesk_WidgetTemplatesAndDragDrop_v101.zip
+- Baseline SHA256: 4270f591ab96b4c6364b7bfcc1f51b450548302ef3795fe43ce87d24ded8469e
+- Imported layout archive SHA256: 7bad88858584e09e791fd8cf126a38d378568233daf9529959da618c7ecbc768
+- Current LocalAppData layout archive SHA256:
+  f1c3dfe127c38d9faa50cafa51acbc0342dc23fa3492885b2792d27b3d3071cd
+- Exact tested source upload SHA256:
+  1c8ed0e60750562497050461aa1e31f90361a5b7f183ffc8cafc2c13748fcb46
+- The newest LocalAppData copy wins when a layout existed in both uploaded
+  folders; ProgramData supplied layouts missing from LocalAppData.
+- Ten uploaded layouts containing 508 layers are bundled under
+  Assets\DesignerLayouts.
+- The seven current LocalAppData layouts replace their older bundled copies;
+  the other three approved layouts are preserved. Both layout uploads are
+  retained under LayoutImportBackup.
+
+DESIGNER AND WIDGET FIXES
+1. Font names now have an installed-font drop-down. The Fonts menu can also
+   import a TTF/OTF into the current widget's persistent DesignerAssets folder.
+2. Divider layers can be added from the Layers menu or canvas context menu.
+3. Main and weather-details backgrounds are real selectable/resizable layers.
+   Bitmap themes use their PNG; Modern and Vintage render their native frame.
+4. Closing, opening, or replacing a changed live layout asks Save/No/Cancel.
+5. Each widget Opacity menu has a persistent "100% while mouse is over widget"
+   option, including per-pixel-alpha widgets.
+6. WeatherAPI requests four days. A provider response with fewer than four
+   automatically falls through to the next configured provider, avoiding blank
+   forecast slots. Steampunk's intentional three-day presentation is unchanged.
+7. Replacing a selected clock hand opens that theme's actual Assets\Themes
+   folder instead of an empty DesignerAssets clock folder.
+8. Botanical weather-detail glyphs use a high-contrast dark green palette.
+9. The 64 MB and pixel-dimension PNG rejection was removed. Imported clock
+   hands remain resizable in Designer.
+
+INSTALLER AND WEATHER SERVICE
+- The maintained installer is Installer-UserMode.iss (the old filename is kept
+  for build compatibility, but the setup now requires administrator rights).
+- Application binaries install under Program Files. The LocalSystem service,
+  WeatherCore, Shared DLL, and provider profiles use a private protected
+  Program Files\EmilyDesk\WeatherService directory.
+- SetupHelper refuses to deploy a service payload from any other directory.
+- The service listens only on http://127.0.0.1:45873/. No hosts-file bootstrap
+  or manual PowerShell step is installed.
+- Upgrade removes the obsolete api.accuweather.com URL reservation and hosts
+  entry, then replaces and health-checks the service. A failed health check
+  aborts setup and removes the partial service deployment.
+- Service data moves to ProgramData\EmilyDesk\WeatherService. Existing
+  locations, provider settings, API keys, and caches are copied forward when
+  the new destination does not already contain them; legacy data is not erased.
+- Uninstall removes the service, URL reservation, and protected service files.
+  It intentionally retains LocalAppData layouts/settings and ProgramData
+  weather data.
+- Installer file/product version metadata now matches 2.10.27.
+- Build.ps1 can Authenticode-sign all application binaries and the installer
+  when EMILYDESK_SIGN_CERT_SHA1 names a trusted code-signing certificate.
+  Set EMILYDESK_REQUIRE_SIGNATURE=1 for a release build that must fail rather
+  than emit an unsigned installer.
+
+VALIDATION COMPLETED HERE
+- v101 baseline SHA256 and ZIP CRC verified; no baseline file was removed.
+- 386 protected artwork, wallpaper, widget-package, dock, and placement files
+  remain byte-identical to v101.
+- All ten imported layout hashes match the uploaded source selection.
+- All 12 project files parse and every compile/project reference resolves.
+- All 115 compiled C# files pass lexical delimiter checks.
+- Static declarations for all requested Designer fixes, the loopback endpoint, protected service
+  deployment, failed-install cleanup, and data-preserving uninstall pass.
+
+WINDOWS RELEASE GATE
+This Linux preparation environment has no .NET Framework MSBuild, Inno Setup,
+Windows Service Control Manager, or Windows desktop. Run Build.cmd on Windows,
+then test fresh install, upgrade, startup, Designer interaction, weather
+provider fallback, and uninstall. The WinCustomize copy should be built with a
+trusted Authenticode certificate; no certificate was available here.
+
+WINDOWS BUILD CORRECTION - 2026-09-07
+- Corrected the two compact-weather background calls to the implemented
+  RenderEditableDesignerBackground method name after the first Windows build
+  exposed CS0103 at NativeWeatherWidget.cs lines 706 and 4481.
+- Corrected selectable Weather Details backgrounds so bundled transparent
+  margins no longer shrink the visible Woodland, Botanical, Industrial, or
+  Steampunk panel. The same theme-aware renderer is used in Designer and at
+  runtime, while the background remains movable and resizable.
+- Added a Windows build regression check requiring the Woodland details frame
+  to fill its saved background bounds.
+- The exact uploaded source and its newly built Designer executable contain no
+  64 MB or pixel-dimension PNG rejection. Add/Change PNG actions now catch real
+  decode or memory errors and show a normal Designer message instead of an
+  unhandled-exception window.
+
+LARGE PNG RESIZE PERFORMANCE - 2026-09-07
+- Designer now decodes an added PNG once and reuses a capped preview while it
+  is displayed. It no longer reopens and recreates a large clock-hand bitmap
+  for every mouse movement.
+- Dragging and resizing temporarily use the faster interactive drawing mode;
+  releasing the mouse immediately repaints at full quality.
+- Removed the redundant second canvas repaint previously requested while
+  synchronizing clock-hand pivots.
+- The cache watches for changed source files, is limited to 128 MB, evicts the
+  least-recently-used previews, and disposes every preview when Designer closes.
+
+DESIGNER EDITING REFINEMENT - 2026-09-07
+- Replaced the always-open raw property grid with a plain-language selected-
+  layer editor. Visible, Locked, Bold, Italic, and Wrap are checkboxes;
+  fonts, alignment, clock-hand role, and panel behavior use drop-downs.
+- The installed-font list is available directly beside the selected text
+  layer. Widget-folder TTF/OTF selection remains one click away.
+- Layer rows now have clickable visibility and lock icons. The bottom layer
+  controls are Up, Down, Duplicate, and Delete.
+- Clock-hand preview rotation has a 0-359 degree slider linked to an exact
+  numeric value. One slider drag creates one undo step.
+- Dragging or arrow-key moving a connected clock hand moves that selected PNG
+  independently. Explicit Align this and Align all commands place hand pivots
+  on the clock centre when wanted.
+- Advanced settings remain available behind a collapsed button for uncommon
+  options; the ordinary editor no longer exposes True/False text values.
+- Installed Designer saves package artwork under the writable shared layout
+  data folder and writes PNGs atomically. This avoids the GDI+ warning caused
+  by overwriting protected or in-use package images under Program Files.
+- The gallery checks for each theme's user-generated Designer preview before
+  falling back to the bundled preview.
+- The Windows Designer verification now checks independent clock-hand mouse
+  dragging, corner rotation, slider/numeric synchronization, persisted runtime
+  alignment, large-image caching, and repeated atomic PNG updates.
+
+CLOCK-HAND FLEXIBILITY AND DRAG REGRESSION CORRECTION - 2026-09-07
+- Replaced the fixed thin-pointer/tail model for imported clock-hand PNGs with
+  an image-local pivot. New and replaced hand PNGs default to 50% across and
+  50% down, matching XWidget artwork with balanced transparent canvas.
+- Pivot-across and pivot-down controls allow the rotation point to be placed
+  anywhere inside unusual, curved, or asymmetrical PNG artwork. Center
+  (XWidget), End of canvas, and Legacy tail presets are included so the
+  original hand behavior remains available alongside centered PNG rotation.
+- Each hand now has independent X, Y, width, height, pivot, and alignment.
+  Selecting a hand in the Layers list and dragging its body keeps that exact
+  hand selected even where clock layers overlap.
+- The square lower-corner handle resizes proportionally around the chosen
+  pivot. The round upper-corner handle rotates clockwise or counter-clockwise;
+  the linked 0-359 slider and exact numeric value remain available.
+- Saved rotation is now part of the runtime layout contract and is added as an
+  alignment offset to the live hour/minute/second angle. Older saved preview
+  angles remain ignored until Designer performs the one-time hand migration.
+- Runtime custom-hand images are decoded once and cached near their rendered
+  dimensions (capped at 2048 pixels) instead of retaining and resampling a
+  potentially enormous source PNG on every clock repaint. This addresses the
+  desktop clock drag delay introduced by very large replacement hands.
+- No automatic operation moves the clock hub or other hands. Align this and
+  Align all are the only commands that intentionally share a dial position.
+
+WINDOWS VERIFICATION CORRECTION - 2026-09-07
+- The first revision-6 Windows build compiled successfully, but its new mouse-
+  drag verification incorrectly required an exact 17-by-13-pixel result.
+  EmilyDesk's alignment guides may legitimately adjust that result. The check
+  now verifies that the selected PNG and its pivot move together by a
+  meaningful amount while the other hand and clock hub remain unchanged.
+
+ROTATION EDITOR VISIBILITY CORRECTION - 2026-09-07
+- Moved clock-hand rotation into its own plainly labelled editor section.
+  Selecting an hour, minute, or second hand now displays a persistent
+  Rotation (degrees) slider with its exact numeric value and the Connected as
+  selector. It no longer depends on restoring individual hidden table rows
+  after the Designer initially opens without a selected layer.
+
+SIGNED CLOCK-HAND ROTATION - 2026-09-07
+- Clock-hand rotation now accepts -359 through +359 degrees. Negative values
+  rotate counter-clockwise and positive values rotate clockwise in both the
+  slider and exact numeric control.
+- Counter-clockwise corner-handle movement remains negative when saved, and
+  the runtime applies that signed value as the hand's alignment offset.
+
+UNIVERSAL BACKGROUND SELECTION AND CLOCK SNAP ANCHOR - 2026-09-08
+- A selected background no longer captures every click inside its rectangle.
+  Normal topmost hit-testing now selects text, image, and divider layers;
+  selected-body priority remains only for overlapping clock hands.
+- Built-in PNG backgrounds are represented by their painted alpha frame rather
+  than the larger transparent export canvas. Existing weather background
+  rectangles are migrated without moving or resizing the visible artwork.
+- Main backgrounds are selectable, movable, and resizable for Weather, Clock,
+  and Calendar across all seven themes. Image and vector themes use the same
+  background-layer contract, and backgrounds are always kept behind their
+  foreground layers.
+- Designer and runtime both alpha-crop image backgrounds into the saved frame,
+  so the selection border, numeric size, live artwork, and click target agree.
+- Image-backed Clock snapping now uses the saved background frame as its stable
+  screen-edge anchor. Custom or repositioned hands no longer change the edge
+  used for snapping, and saved desktop positions are not reinterpreted.
+- Calendar fixed-composition snapping follows an edited background frame at
+  its scaled runtime size. Modern and Vintage use the same optional snap-anchor
+  contract through their vector background layer.
+- Windows verification now exercises background creation and layer switching
+  across all 21 theme/widget combinations, calendar-frame clicking, foreground
+  selection after selecting a background, and Woodland clock snap anchoring.
+
+WINDOWS BACKGROUND-REPLACEMENT VERIFICATION CORRECTION - 2026-09-08
+- The universal-background revision compiled successfully on Windows, but its
+  template verification found that replacing background artwork reset the
+  existing background layer to the theme's default rectangle.
+- Background replacement now preserves the layer's saved X, Y, width, height,
+  scale, and opacity. Only a newly created layer or the one-time legacy
+  migration calculates an alpha-mapped frame, so user positioning is retained.
+
+CLOCK TOP-SNAP AND WEATHER SNAP REGRESSION CORRECTION - 2026-09-08
+- Restored Weather's approved theme-artwork edge anchor. Moving or resizing a
+  Designer background no longer changes Weather's desktop snap calculation or
+  permits its visible frame to be positioned beyond the screen.
+- Transparent image-backed clocks now complete top-edge snapping after the
+  Windows move loop, allowing the clock frame to reach the top edge even when
+  its host canvas contains a transparent margin larger than the snap distance.
+
+WEATHER SIZE AND LEGACY-LAYOUT CORRECTION - 2026-09-08
+- Weather layouts saved before editable-background migration continue drawing
+  the complete transparent source canvas, exactly as in the last known-good
+  runtime. This restores the approved 100% main-panel size and keeps its frame
+  aligned with the established Weather snap anchor.
+- Alpha-cropped rendering is enabled only after Designer has migrated that
+  background to its matching painted-frame rectangle. Background selection and
+  resizing remain available without enlarging older saved Weather layouts.
+- No Clock rendering, sizing, or snapping code was changed in this correction.
+- Restored the Designer-facing five-argument background-rendering overload so
+  DesignerForm and its verification project compile against the runtime fix.

@@ -1,0 +1,28 @@
+EMILYDESK BUILD 1340 — EMBER GLOW CLOCK / INSTALLER FIX
+=======================================================
+
+This build permanently corrects the Ember Glow clock and includes the repaired
+theme in the EmilyDesk installer.
+
+FIXES
+
+- Removes the saved preview-angle offsets that made Ember Glow show the wrong
+  time even though Windows and other EmilyDesk clock themes were correct.
+- Aligns the hour, minute, and second hands and centre cap at 180,180.
+- Updates Ember Glow to theme version 1.2.1.
+- Installs Ember Glow automatically on fresh installations and upgrades.
+- Preserves personal DesignerLayouts, widget positions, settings, and every
+  other EmilyDesk theme.
+
+BUILD AND TEST
+
+1. Keep the previous working installer as a rollback copy.
+2. Run Build.cmd from this folder on Windows.
+3. Install Output\EmilyDeskInstaller.exe.
+4. Apply Ember Glow to the Clock and compare it with the Windows system tray.
+5. Confirm the hour, minute, and second hands meet at the centre cap.
+6. Confirm Ember Glow is available without importing an .emilytheme file.
+
+The build rejects an Ember Glow package containing nonzero live rotation
+offsets, a misaligned hand pivot, a misaligned centre cap, or a missing
+fresh-install theme payload.

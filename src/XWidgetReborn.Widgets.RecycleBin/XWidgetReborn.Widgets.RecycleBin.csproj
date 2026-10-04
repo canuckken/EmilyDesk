@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup><Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProjectGuid>{F6BBCA31-1B70-4DBA-86A5-762E7FD25136}</ProjectGuid><OutputType>Library</OutputType><RootNamespace>XWidgetReborn.Widgets.RecycleBin</RootNamespace><AssemblyName>XWidgetReborn.Widgets.RecycleBin</AssemblyName><TargetFrameworkVersion>v4.0</TargetFrameworkVersion></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' "><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants></PropertyGroup>
+  <ItemGroup><Reference Include="System"/><Reference Include="System.Core"/><Reference Include="System.Drawing"/><Reference Include="System.Windows.Forms"/></ItemGroup>
+  <ItemGroup><Compile Include="AssemblyInfo.cs"/><Compile Include="NativeRecycleBinWidget.cs"/></ItemGroup>
+  <ItemGroup><ProjectReference Include="..\XWidgetReborn.WidgetSdk\XWidgetReborn.WidgetSdk.csproj"><Project>{B9ABAD31-6D3E-43EA-AE3E-A9178A94E616}</Project><Name>XWidgetReborn.WidgetSdk</Name></ProjectReference></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

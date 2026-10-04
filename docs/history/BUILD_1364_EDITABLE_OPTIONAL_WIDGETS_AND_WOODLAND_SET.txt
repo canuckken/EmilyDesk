@@ -1,0 +1,45 @@
+EmilyDesk Build 1364
+Editable Optional Widgets and Woodland Nature Set
+=================================================
+
+This source package contains the approved Build 1364 changes.
+
+Industrial optional-widget fixes
+--------------------------------
+- Industrial Calculator: version 1.0.1, 270 x 351.
+- Industrial Currency Converter: version 1.0.1, 500 x 330.
+- Industrial System Information: version 1.0.1, 500 x 330.
+- Excess space has been removed and the System Information layout has been
+  rebalanced vertically.
+- Each background is now a selectable Designer image layer. Text, values,
+  meters, controls, and other content remain independently editable.
+
+Woodland Nature optional widgets
+--------------------------------
+- Woodland Nature Calculator: version 1.0.0, 270 x 351.
+- Woodland Nature Currency Converter: version 1.0.0, 500 x 330.
+- Woodland Nature System Information: version 1.0.0, 500 x 330.
+- The approved hardwood, dark-green, brass, and cream artwork is included.
+
+Preserved behavior
+------------------
+- Searchable currency selection, including Philippine Peso (PHP).
+- Native CPU, memory, disk, network, uptime, Windows, and computer readings.
+- Optional direct Core Temp shared-memory readings; Core Temp is not required
+  for the other readings.
+- Anti-aliased widget and Designer text.
+- Build 1363 Woodland clock-hand migration and current-preview protection.
+
+Windows build output
+--------------------
+Run Build.cmd from the EmilyDesk source folder on Windows. The optional-widget
+packages are produced under Output\OptionalWidgets:
+
+  IndustrialCalculator-1.0.1.emilywidget
+  IndustrialCurrencyConverter-1.0.1.emilywidget
+  IndustrialSystemInformation-1.0.1.emilywidget
+  WoodlandNatureCalculator-1.0.0.emilywidget
+  WoodlandNatureCurrencyConverter-1.0.0.emilywidget
+  WoodlandNatureSystemInformation-1.0.0.emilywidget
+
+The installer does not need to be run merely to produce these files.

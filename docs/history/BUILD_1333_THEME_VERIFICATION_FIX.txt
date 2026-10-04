@@ -1,0 +1,9 @@
+EMILYDESK BUILD 1333
+====================
+
+This build fixes Stage 5 verification when an imported theme is already
+installed. The validator continues to require all seven built-in themes, but
+it no longer rejects additional imported themes such as Ember Glow.
+
+No widget artwork, layouts, saved user settings, or installer behavior was
+changed by this repair.

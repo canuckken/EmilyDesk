@@ -1,0 +1,27 @@
+EmilyDesk Build 1353 - Steampunk Calculator Artwork
+===================================================
+
+What changed
+------------
+- The Steampunk Calculator now uses a detailed transparent background skin.
+- Its brass gears, copper pipes, dark wood, rivets, and leather center match
+  the approved EmilyDesk Steampunk widgets.
+- The entire lower frame is visible and the final button row has safe clearance
+  above it at the corrected 300 x 390 live size.
+- The Gallery preview and icon now show the same detailed calculator artwork.
+- Import Widget still opens at Documents\EmilyDesk\Widgets by default.
+- Currency Converter and System Information remain prototypes and are not
+  packaged by this build.
+
+Building
+--------
+Run Build.cmd on the Windows build computer. A successful build creates:
+
+  Output\EmilyDeskInstaller.exe
+  Output\OptionalWidgets\SteampunkCalculator-1.1.1.emilywidget
+
+After installing Build 1353 once, copy the .emilywidget file into:
+
+  Documents\EmilyDesk\Widgets
+
+Then choose Import Widget in EmilyDesk. The file chooser opens in that folder.

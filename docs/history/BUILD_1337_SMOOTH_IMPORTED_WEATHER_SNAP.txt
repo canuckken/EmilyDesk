@@ -1,0 +1,13 @@
+EmilyDesk Build 1337
+====================
+
+Imported Weather widgets now detach smoothly from the top edge instead of
+jumping when Windows clamps their larger transparent slide-panel host.
+
+Imported Weather also snaps using the same background-layer boundary contract
+as Calendar. This preserves the PNG's tiny transparent outer edge and makes
+their visible top spacing match.
+
+Build 1336's Ember Glow Weather and Calendar size match remains included.
+Extract this ZIP to a new folder and run Build.cmd as Administrator. Install
+only after the build reports BUILD SUCCESSFUL and identifies Build 1337.

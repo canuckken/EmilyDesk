@@ -1,0 +1,17 @@
+EmilyDesk Build 1335
+====================
+
+This source corrects the Stage 4 Dashboard verifier so it follows the dynamic
+theme catalog used by the Docks page. It validates the full built-in names
+(including Botanical Nature and Woodland Nature) and any installed imported
+themes such as Ember Glow.
+
+The Build 1334 runtime corrections remain included:
+- Imported theme backgrounds resolve in the Weather widget.
+- Imported theme docks appear dynamically in the Dashboard Docks page.
+- Ember Glow Weather, Calendar, Details, Clock, Recycle Bin and dock assets are
+  preserved.
+
+Extract this ZIP to a new folder and run Build.cmd as Administrator. Do not run
+or install an old installer after a failed build. The completed build must
+report BUILD SUCCESSFUL and identify Build 1335.

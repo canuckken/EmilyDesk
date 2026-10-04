@@ -1,0 +1,27 @@
+Build 100 source/layout validation (not Windows executable test results)
+
+PASS: Exact v99 baseline SHA256:
+c694e323c8cb0459cec26756552e20f0d01a577880ee6dbb0a24c8f51991e502
+PASS: No original baseline files removed.
+PASS: Existing widget implementations, layout painters, docks, bins, snapping,
+      Woodland sizing and original artwork are byte-identical to v99.
+PASS: Newest uploaded copy selected for each of 10 active layout filenames.
+PASS: All 505 layers preserve their exact coordinates, typography, ordering,
+      visibility, deletion records, bindings and details-panel settings.
+PASS: Nine layouts byte-identical; one Steampunk built-in icon-pack path
+      normalized to use the same shipped pack without an absolute PC path.
+PASS: All referenced backgrounds and 44 Steampunk weather icons are included.
+PASS: Both complete uploaded archives retained unchanged as backups.
+PASS: Legacy Woodland v1 layout is not activated.
+PASS: Shipped defaults never overwrite personal saves; local/shared timestamp
+      precedence is preserved; isolated tests do not fall through to defaults.
+PASS: All project XML parses and 110 compile entries resolve.
+PASS: C# delimiter checks.
+PASS: Existing Stage 5 assertions unchanged. The Stage 5 process tests factory
+      geometry; imported-layout render/save checks are separately registered
+      in the normal Designer verification sequence.
+PASS: Asset staging covers bundled layouts in the full and portable payloads;
+      both installer scripts include the Assets directory.
+
+NOT RUN HERE: Windows compilation, executable tests, interactive visual checks.
+Build.cmd still runs the Windows verification stages.

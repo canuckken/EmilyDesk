@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "weatherapi",
+  "displayName": "WeatherAPI.com",
+  "adapter": "weatherapi-v1",
+  "enabled": true,
+  "requiresApiKey": true,
+  "baseUrl": "https://api.weatherapi.com/v1/forecast.json",
+  "websiteUrl": "https://www.weatherapi.com/",
+  "query": {
+    "days": "4",
+    "aqi": "no",
+    "alerts": "no"
+  }
+}

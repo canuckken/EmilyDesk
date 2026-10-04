@@ -1,0 +1,13 @@
+EmilyDesk Build 1336
+====================
+
+Ember Glow Weather now matches the visible Ember Glow Calendar frame size at
+100%. Only imported-theme Weather presentation dimensions were adjusted.
+
+Build 1335 fixes remain included:
+- Ember Glow Weather background loading.
+- Dynamic Ember Glow dock button in the Dashboard.
+- Dynamic Stage 4 dock verification.
+
+Extract this ZIP to a new folder and run Build.cmd as Administrator. Install
+only after the build reports BUILD SUCCESSFUL and identifies Build 1336.

@@ -1,0 +1,19 @@
+Offline validation - Build 97
+
+PASS: v96 baseline SHA-256:
+d46b159b8b685e662fb9903dc4260d785ec637ce2a36b6d23d9c7451b2e630ce
+PASS: All 318 baseline asset files are byte-identical.
+PASS: Dock source, recycle-bin source, WidgetWindow and
+      Verify-NatureWeatherPlacement.ps1 are byte-identical.
+PASS: Weather CompositionAnchorBounds, IndustrialMainVisibleLocalBounds,
+      IndustrialPresentationMainVisibleBounds and CalculateCompositeLayout
+      are unchanged.
+PASS: No original files removed; no XWidgetTheme folder restored.
+PASS: 12 project XML files and all 108 compile entries resolve.
+PASS: C# delimiter checks for all 110 source files.
+PASS: Both nature weather adapters retain complete saved documents and panels.
+PASS: New rendering files are included in their projects.
+PASS: Mandatory Windows Designer verification remains in Build.ps1.
+
+NOT RUN: Windows compilation, executable save/render tests, interactive GUI QA.
+These source checks do not substitute for compiling and testing on Windows.

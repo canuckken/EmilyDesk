@@ -1,0 +1,18 @@
+EMILYDESK BUILD 1342 — BOTANICAL AND WOODLAND REFINEMENT
+========================================================
+
+This build installs the approved Botanical Nature backgrounds and updates the
+Woodland Nature clock to match its approved mockup.
+
+- Refined Botanical Clock, Weather, and Calendar artwork with ivory paper,
+  sage-green framing, and soft-pink flowers.
+
+- Larger cream Georgia numerals.
+- A complete 60-marker dial with stronger hour markers.
+- Separate transparent ivory-and-bronze PNG hour and minute hands.
+- A slim copper PNG second hand with no tail past the centre.
+- All hands retain live local-time movement and a shared centre pivot.
+- The existing wood frame and dark-green face remain unchanged.
+- Every other theme remains unchanged.
+
+Run Build.cmd on Windows, then install Output\EmilyDeskInstaller.exe.

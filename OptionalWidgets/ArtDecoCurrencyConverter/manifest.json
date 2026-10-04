@@ -1,0 +1,18 @@
+{
+  "id": "utility.art-deco-currency-converter",
+  "name": "Art Deco Currency Converter",
+  "description": "A searchable Art Deco currency converter with PHP and 165+ currencies.",
+  "version": "1.0.3",
+  "author": "EmilyDesk Community Project",
+  "assembly": "EmilyDesk.Widgets.ArtDecoCurrencyConverter.dll",
+  "type": "EmilyDesk.Widgets.CurrencyConverter.CurrencyConverterWidget",
+  "minimumSdkVersion": "2.8.3.0",
+  "minimumEngineVersion": "2.10.27",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "enabledByDefault": false,
+  "category": "Utilities",
+  "official": false,
+  "bundled": false,
+  "capabilities": [ "currency", "network", "searchable-currencies", "php", "designer", "theme-switching", "scale", "opacity" ]
+}

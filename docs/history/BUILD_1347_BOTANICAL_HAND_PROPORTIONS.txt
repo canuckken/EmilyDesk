@@ -1,0 +1,19 @@
+EMILYDESK BUILD 1347
+====================
+
+This build replaces the barely perceptible width adjustments from Build 1346
+with a proportionally balanced Botanical Nature clock-hand set.
+
+At 100% scale, the approximate visible artwork widths are:
+
+- Hour hand:   9.4 pixels
+- Minute hand: 8.2 pixels
+- Second hand: 3.7 pixels
+
+The hour hand is modestly wider, the minute hand is approximately the width of
+the previous hour hand, and the second hand is clearly visible while remaining
+the finest hand. The rounded forest-green and antique-brass styling remains
+delicate rather than heavy.
+
+Lengths, centre pivots, marker alignment, bezel clearance, the ten supplied
+Designer layouts, personal settings, and every other theme remain unchanged.

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="brass" x2="0" y2="1"><stop stop-color="#d99a43"/><stop offset="1" stop-color="#5b2d1b"/></linearGradient>
+    <linearGradient id="key" x2="0" y2="1"><stop stop-color="#68442f"/><stop offset="1" stop-color="#211510"/></linearGradient>
+    <linearGradient id="op" x2="0" y2="1"><stop stop-color="#a95726"/><stop offset="1" stop-color="#452015"/></linearGradient>
+    <radialGradient id="glass"><stop stop-color="#4d2d18"/><stop offset="1" stop-color="#0e0908"/></radialGradient>
+  </defs>
+  <g transform="translate(38 11) scale(.6)">
+    <image xlink:href="../../OptionalWidgets/Calculator/steampunk-calculator-skin.png" width="300" height="390"/>
+    <rect x="70" y="34" width="160" height="34" rx="8" fill="url(#brass)" stroke="#edbd58" stroke-width="2"/>
+    <text x="150" y="56" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="#ffe1a0">STEAMPUNK</text>
+    <rect x="46" y="78" width="208" height="61" rx="10" fill="url(#glass)" stroke="#e19e35" stroke-width="3"/>
+    <text x="240" y="121" text-anchor="end" font-family="Consolas,monospace" font-size="31" font-weight="bold" fill="#ffd070">42</text>
+    <g stroke-width="2">
+      <g fill="url(#key)" stroke="#a66d34"><rect x="46" y="151" width="60" height="47" rx="8"/><rect x="120" y="151" width="60" height="47" rx="8"/><rect x="46" y="212" width="60" height="47" rx="8"/><rect x="120" y="212" width="60" height="47" rx="8"/><rect x="46" y="273" width="134" height="47" rx="8"/></g>
+      <g fill="url(#op)" stroke="#e7a743"><rect x="194" y="151" width="60" height="108" rx="8"/><rect x="194" y="273" width="60" height="47" rx="8"/></g>
+    </g>
+    <g font-family="Georgia,serif" font-size="24" text-anchor="middle" fill="#ffe6b2"><text x="76" y="182">7</text><text x="150" y="182">8</text><text x="224" y="212">+</text><text x="76" y="243">4</text><text x="150" y="243">5</text><text x="113" y="304">0</text><text x="224" y="304">=</text></g>
+  </g>
+</svg>

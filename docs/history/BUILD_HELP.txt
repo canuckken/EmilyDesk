@@ -1,0 +1,21 @@
+XWidget Reborn - Build Help
+
+HOW TO BUILD
+1. Double-click Build.cmd.
+2. Wait for BUILD COMPLETED SUCCESSFULLY.
+3. The installer will be in Output\XWidgetRebornUserSetup.exe.
+4. Installable native widget packages will be in Output\Packages.
+
+WIDGET PACKAGE OUTPUT
+- Every native widget with a manifest under Widgets is packaged automatically.
+- Reborn Clock is written to Output\Packages\RebornClock.xwrwidget.
+- The build validates and test-installs every generated package through the
+  Dashboard package installer before reporting success.
+
+IF THE BUILD FAILS
+1. Open the BuildLogs folder.
+2. Open build-errors.txt in Notepad.
+3. Send that file or a screenshot of its contents.
+
+The longer msbuild.log is kept for detailed diagnosis, but build-errors.txt
+contains the important error lines in a much easier format.

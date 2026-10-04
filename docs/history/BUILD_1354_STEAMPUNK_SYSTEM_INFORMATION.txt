@@ -1,0 +1,34 @@
+EmilyDesk Build 1354 - Steampunk System Information
+===================================================
+
+What changed
+------------
+- Added Steampunk System Information as the second optional widget package.
+- CPU load, memory, system-drive usage, network throughput, uptime, Windows
+  version, computer name, and 32/64-bit details work without extra software.
+- CPU temperature is optional. When Core Temp is running, EmilyDesk reads its
+  official local shared-memory interface and displays the hottest core in °C.
+- The widget does not bundle Core Temp or any Core Temp DLL and never sends
+  system information over the internet.
+- The realistic brass, copper, mahogany, and leather skin matches the accepted
+  Steampunk Calculator and existing EmilyDesk Steampunk widgets.
+- Artwork-aware snap bounds place the visible frame tightly against every edge.
+- Currency Converter remains an unpublished prototype.
+
+Building
+--------
+Run Build.cmd on the Windows build computer. A successful build creates:
+
+  Output\EmilyDeskInstaller.exe
+  Output\OptionalWidgets\SteampunkCalculator-1.1.1.emilywidget
+  Output\OptionalWidgets\SteampunkSystemInformation-1.0.0.emilywidget
+
+If the currently installed EmilyDesk already supports Import Widget, it does
+not need to be reinstalled for this test. Import the System Information package
+from Output\OptionalWidgets.
+
+Optional temperature setup
+--------------------------
+Install and run Core Temp from its official website. If temperature remains
+unavailable, enable Core Temp's shared-memory option. All other readings work
+without Core Temp.

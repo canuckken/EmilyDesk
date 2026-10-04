@@ -1,0 +1,15 @@
+EmilyDesk Build 1369
+====================
+
+This build replaces the clipped-looking upper Art Deco ornament with a fully
+contained curved arch on the Calculator, Currency Converter, and System
+Information optional widgets.
+
+The updated optional-widget packages are:
+
+- ArtDecoCalculator-1.0.2.emilywidget
+- ArtDecoCurrencyConverter-1.0.2.emilywidget
+- ArtDecoSystemInformation-1.0.2.emilywidget
+
+Run Build.cmd on Windows, then import all three packages from
+Output\OptionalWidgets. Importing version 1.0.2 replaces earlier versions.

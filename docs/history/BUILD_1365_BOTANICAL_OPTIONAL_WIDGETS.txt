@@ -1,0 +1,24 @@
+EmilyDesk Build 1365
+====================
+
+This build adds the approved Botanical Nature versions of the Calculator,
+Currency Converter, and System Information optional widgets.
+
+Optional widget updates
+-----------------------
+- Adds all three Botanical Nature optional-widget packages.
+- Adds Appearance > Theme switching between installed optional-widget themes.
+- Keeps Edit in Designer and exposes the background as a selectable layer.
+- Uses anti-aliased text in every optional widget theme.
+- Reduces the Industrial, Woodland Nature, and Botanical Nature Currency
+  Converter to 460 x 304.
+- Reduces the Industrial, Woodland Nature, and Botanical Nature System
+  Information widget to 480 x 285, removing unused lower space.
+- Uses a compact 270 x 351 size for the Industrial, Woodland Nature, and
+  Botanical Nature Calculator.
+
+Packaging
+---------
+Run Build.cmd on Windows. Build 1365 produces the installer and twelve
+optional packages under Output\OptionalWidgets. Install Build 1365 before
+using the new Appearance > Theme command, then import the desired packages.

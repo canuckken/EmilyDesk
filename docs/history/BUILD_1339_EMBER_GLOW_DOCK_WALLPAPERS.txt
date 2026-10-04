@@ -1,0 +1,12 @@
+EmilyDesk Build 1339
+
+This build adds the approved darker Ember Glow dock frame and two selectable
+Ember Glow wallpapers. Each wallpaper includes 3840x2160 and 3840x2400
+versions. Dashboard Wallpaper settings and Designer now support wallpaper
+artwork supplied by imported themes.
+
+Install the Build 1339 EmilyDesk installer, then import or replace Ember Glow
+with EmberGlow-1.2.0.emilytheme. Personal layouts and settings are preserved.
+
+All Build 1338 dock transparency and Build 1337 weather size, snapping, and
+smooth edge-release behavior are retained.

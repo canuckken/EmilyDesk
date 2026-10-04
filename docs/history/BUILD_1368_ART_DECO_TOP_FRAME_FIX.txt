@@ -1,0 +1,16 @@
+EmilyDesk Build 1368
+====================
+
+This build corrects the clipped-looking upper frame on all three Art Deco
+optional widgets by exposing the full upper fan ornament and rebalancing the
+title/content layout inside the existing compact dimensions.
+
+The updated optional-widget packages are:
+
+- ArtDecoCalculator-1.0.1.emilywidget
+- ArtDecoCurrencyConverter-1.0.1.emilywidget
+- ArtDecoSystemInformation-1.0.1.emilywidget
+
+Run Build.cmd on Windows. Install Output\EmilyDeskInstaller.exe to update
+EmilyDesk to Build 1368, then import all three version 1.0.1 packages from
+Output\OptionalWidgets. Importing them replaces version 1.0.0.

@@ -1,0 +1,18 @@
+EmilyDesk Build 1372
+
+Approved Ember Glow optional widgets:
+- EmberGlowCalculator-1.0.0.emilywidget
+- EmberGlowCurrencyConverter-1.0.0.emilywidget
+- EmberGlowSystemInformation-1.0.0.emilywidget
+
+All three widgets include editable background layers, anti-aliased text,
+right-click Designer access, installed-theme switching, Gallery/Dock artwork,
+and independent import/removal support.
+
+Weather Designer/runtime correction:
+- Forecast length is now defined by each saved layout instead of being forced
+  to four days.
+- New layouts still begin with four forecast days.
+- Designers can add and connect up to the provider's fifteen forecast days.
+- Existing three-, four-, and five-day layouts retain their authored count.
+- Includes the supplied updated Art Deco weather layout.

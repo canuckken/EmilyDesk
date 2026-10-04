@@ -1,0 +1,13 @@
+EMILYDESK BUILD 1346
+====================
+
+Botanical Nature clock visibility refinement:
+
+1. The second hand is one additional visible desktop pixel wider.
+2. The minute hand is widened by five canvas pixels. Because only about one
+   quarter of that PNG canvas contains visible artwork, this adds slightly more
+   than one clearly visible pixel to the hand itself at 100% scale.
+3. Hand lengths, pivot alignment, colors, and the Botanical bezel are unchanged.
+
+All ten Designer layouts supplied for Build 1345 remain included. No personal
+layouts, assets, settings, widget positions, or other themes are removed.

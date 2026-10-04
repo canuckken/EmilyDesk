@@ -1,0 +1,28 @@
+EMILYDESK BUILD 1343
+====================
+
+This build completes the nature-theme refinement and corrects two runtime issues.
+
+NATURE ARTWORK
+- Woodland Nature and Botanical Nature use conventional transparent PNG clock
+  hands instead of the previous leaf hands.
+- Botanical Nature uses larger serif numerals and a complete marked dial.
+- Existing copied legacy leaf-hand files are ignored only when their exact old
+  dimensions identify them; other user-selected PNG hands remain untouched.
+- Botanical Nature uses the approved ivory, sage, and soft-pink dock frame.
+
+WEATHER ANIMATION
+- Instant, Quick, Smooth, and Bouncy selections now persist.
+- Theme Designer preview data no longer overwrites a user's animation choice.
+- Each option has a distinct motion curve and duration.
+
+ENGINE STARTUP
+- A healthy Engine from the current build is retained.
+- A living Engine that is still loading is no longer reported as failed after
+  five seconds.
+- A different-build Engine is restarted once so installed code and the running
+  Engine stay in sync.
+
+Run Build.cmd on Windows. The standard verifier checks the nature PNG canvases,
+Weather animation persistence, Gallery rendering, widget themes, packaging, and
+installer contents before reporting success.

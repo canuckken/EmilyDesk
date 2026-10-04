@@ -1,0 +1,25 @@
+{
+  "id": "native.weather",
+  "name": "Weather",
+  "description": "Official weather widget with an interactive animated forecast panel.",
+  "version": "1.2.9",
+  "author": "EmilyDesk Community Project",
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "assembly": "XWidgetReborn.Widgets.Weather.dll",
+  "type": "XWidgetReborn.Widgets.Weather.NativeWeatherWidget",
+  "minimumSdkVersion": "2.7.1.0",
+  "minimumEngineVersion": "2.7.4.0",
+  "category": "Weather",
+  "official": true,
+  "bundled": true,
+  "capabilities": [
+    "settings",
+    "refresh",
+    "location",
+    "forecast",
+    "scale",
+    "opacity"
+  ],
+  "enabledByDefault": false
+}

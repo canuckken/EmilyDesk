@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550" height="363" viewBox="0 0 550 363">
+  <defs><style>text{font-family:'Segoe UI',sans-serif;fill:#f6e7ba}.serif{font-family:Georgia,serif}.gold{fill:#d8a94f}.muted{fill:#a9a59a}</style></defs>
+  <image xlink:href="art-deco-currency-converter-skin.png" width="550" height="363"/>
+  <text x="275" y="68" text-anchor="middle" font-size="16" font-weight="bold" class="serif">CURRENCY</text><text x="275" y="79" text-anchor="middle" font-size="7" font-weight="bold">CONVERTER</text>
+  <text x="62" y="96" font-size="13" font-weight="bold" class="gold">AMOUNT</text><rect x="50" y="98" width="450" height="62" rx="10" fill="#090b0c" stroke="#d6a54d" stroke-width="2"/><text x="70" y="144" font-size="31" font-weight="bold" class="serif">1.00</text><rect x="420" y="109" width="62" height="40" rx="8" fill="#302b20" stroke="#d6a54d"/><text x="451" y="135" text-anchor="middle" font-size="15" font-weight="bold">CAD</text>
+  <line x1="62" y1="176" x2="190" y2="176" stroke="#a87a31"/><line x1="360" y1="176" x2="488" y2="176" stroke="#a87a31"/><text x="275" y="174" text-anchor="middle" font-size="13" font-weight="bold" class="gold">CONVERTS TO</text>
+  <rect x="50" y="184" width="450" height="66" rx="10" fill="#090b0c" stroke="#d6a54d" stroke-width="2"/><text x="70" y="235" font-size="34" font-weight="bold" class="serif">0.7147</text><rect x="420" y="198" width="62" height="40" rx="8" fill="#302b20" stroke="#d6a54d"/><text x="451" y="224" text-anchor="middle" font-size="15" font-weight="bold">USD</text>
+  <text x="275" y="268" text-anchor="middle" font-size="12" font-weight="bold">1 CAD = 0.714732 USD</text><text x="275" y="289" text-anchor="middle" font-size="10" class="muted">Rates By Exchange Rate API</text><text x="275" y="310" text-anchor="middle" font-size="9" font-weight="bold" class="gold">DOUBLE-CLICK TO CHANGE</text>
+</svg>

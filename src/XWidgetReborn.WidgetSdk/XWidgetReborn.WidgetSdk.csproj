@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9ABAD31-6D3E-43EA-AE3E-A9178A94E616}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>XWidgetReborn.WidgetSdk</RootNamespace>
+    <AssemblyName>XWidgetReborn.WidgetSdk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel><PlatformTarget>AnyCPU</PlatformTarget></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel><PlatformTarget>AnyCPU</PlatformTarget></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Drawing" /><Reference Include="System.Web.Extensions" /></ItemGroup>
+  <ItemGroup><Compile Include="DesignerLayoutFiles.cs" /><Compile Include="SavedDesignerLayout.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="AssemblyInfo.cs" /><Compile Include="EmilyDeskThemeCatalog.cs" /><Compile Include="OptionalWidgetThemeCatalog.cs" /><Compile Include="ThemeSkinCache.cs" /><Compile Include="VintageThemePainter.cs" /><Compile Include="ModernThemePainter.cs" /><Compile Include="SlidePanel.cs" /><Compile Include="IWidget.cs" /><Compile Include="IOfficialWidget.cs" /><Compile Include="IWidgetDesignerProvider.cs" /><Compile Include="IWidgetPointerInput.cs" /><Compile Include="IWidgetDesktopInteraction.cs" /><Compile Include="IWidgetHotspotProvider.cs" /><Compile Include="IWidgetStyleProvider.cs" /><Compile Include="IWidgetThemeProvider.cs" /><Compile Include="WidgetUpdateRate.cs" /><Compile Include="IRuntimeContext.cs" /></ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

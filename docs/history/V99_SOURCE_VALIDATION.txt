@@ -1,0 +1,20 @@
+Build 99 source validation (not a Windows executable test run)
+
+PASS: Exact Build 98 archive used as the only baseline.
+PASS: No baseline files removed.
+PASS: Only two verification sources and three version files changed.
+PASS: Widget/runtime, rendering, saved-layout, input, snapping, docks, bins
+      and all artwork are byte-identical to Build 98.
+PASS: Reproduced stale Stage 5 contract: expected 1081x494, actual 1141x524.
+PASS: Corrected Woodland Stage 5 expectation matches production 1141x524.
+PASS: Other theme footprint assertions unchanged.
+PASS: Build verification gates and error handling unchanged; no test bypassed.
+PASS: Designer save/render verification uses Woodland's new 100% surface.
+PASS: Project XML parses and all 109 source compile entries resolve.
+PASS: Changed C# source delimiter checks.
+
+NOT RUN HERE: Windows compilation, executable verification, interactive GUI.
+The complete verification sequence still runs through Build.cmd on Windows.
+
+Baseline SHA256:
+7ef564dd34017315c90bdbc91928ae7099d565eea93380115194b50b3428b8be

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "environment-canada",
+  "displayName": "Environment Canada (Canada only)",
+  "adapter": "eccc-geomet-v1",
+  "enabled": true,
+  "requiresApiKey": false,
+  "baseUrl": "https://api.weather.gc.ca/collections/citypageweather-realtime/items",
+  "websiteUrl": "https://weather.gc.ca/",
+  "query": {
+    "f": "json",
+    "limit": "100"
+  }
+}

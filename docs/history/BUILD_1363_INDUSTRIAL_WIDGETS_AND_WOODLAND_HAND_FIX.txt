@@ -1,0 +1,20 @@
+EmilyDesk Build 1363
+
+- Adds Industrial Calculator 1.0.0 as a separately importable optional widget.
+- Adds Industrial Currency Converter 1.0.0 with searchable currencies and PHP.
+- Adds Industrial System Information 1.0.0 with native readings and optional
+  direct Core Temp shared-memory support.
+- Uses the approved Industrial brushed-steel, charcoal, amber, and cream
+  visual language across all three widgets.
+- Keeps Currency Converter and System Information at 550 x 363.
+- Provides anti-aliased text, right-click Edit in Designer, Gallery previews,
+  Widget Dock previews, icons, scaling, opacity, and snapping support.
+- Corrects old Woodland Nature layouts that still point to the superseded
+  leaf-hand PNG files, including the portable copies saved by Build 1362.
+- Regenerates Gallery artwork during Build.cmd and selects the newest valid
+  preview so stale leaf-hand images cannot return in the Widget Dock.
+- Produces these additional packages under Output\OptionalWidgets:
+  IndustrialCalculator-1.0.0.emilywidget
+  IndustrialCurrencyConverter-1.0.0.emilywidget
+  IndustrialSystemInformation-1.0.0.emilywidget
+- Build identifier updated to 1363.

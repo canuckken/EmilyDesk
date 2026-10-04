@@ -1,0 +1,26 @@
+EmilyDesk Build 1358
+====================
+
+This source build supersedes the unpublished Build 1357 package.
+
+Included fixes
+--------------
+- Keeps Build 1357's Designer-to-Gallery preview and icon refresh correction.
+- Keeps anti-aliased text rendering for the System Information widget and
+  applies the same standard to the Calculator, Currency Converter, and their
+  Designer previews.
+- Adds Edit in Designer to the right-click menu of all three optional widgets.
+- Adds a Dashboard Designer selector for Weather, Clock, Calendar, Recycle Bin,
+  installed themes, and Designer-capable imported widgets.
+- Fixes the clipped CONVERTS TO label.
+- Uses ExchangeRate-API's attributed open endpoint for broad currency support.
+- Adds searchable currency-code entry and Philippine Peso (PHP).
+
+Expected optional packages
+--------------------------
+Output\OptionalWidgets\SteampunkCalculator-1.1.2.emilywidget
+Output\OptionalWidgets\SteampunkSystemInformation-1.0.3.emilywidget
+Output\OptionalWidgets\SteampunkCurrencyConverter-1.0.1.emilywidget
+
+Run Build.cmd on Windows. The build script compiles and validates EmilyDesk,
+the Designer, Gallery previews, replacement imports, and optional packages.

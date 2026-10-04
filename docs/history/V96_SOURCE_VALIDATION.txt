@@ -1,0 +1,20 @@
+v96 source and package validation
+
+PASS: All 545 files from the accepted v95 ZIP are retained.
+PASS: No old code or legacy XWidgetTheme folder was restored.
+PASS: The 34 checked dock, desktop-bin-icon and snapping files are unchanged.
+PASS: All 12 C# project files have valid, nonduplicated Compile file references.
+PASS: Changed/new C# files pass string/comment/delimiter structural checks.
+PASS: All 14 bin PNGs are byte-identical to the approved preview artwork.
+PASS: All 14 PNGs decode as 1024x1024 RGBA with fully transparent canvas edges.
+PASS: Woodland's accepted empty/full barrel images remain unchanged from v95.
+PASS: Obsolete recycle-bin caption/count code and controls are removed.
+PASS: Build and installer versions agree on 2.10.22.
+
+NOT RUN HERE: C# compilation, Windows desktop interaction, and the new
+Designer save/render test suite. This is a Linux environment without a .NET
+Framework Windows build toolchain. Structural checks are not compilation.
+
+Build.cmd runs the new isolated 21-widget Designer save/render checks before
+packaging. It also retains the existing nature-placement and theme checks.
+See DESIGNER_SAVE_AND_REALISTIC_BINS_V96.txt for details and testing steps.

@@ -1,0 +1,16 @@
+EmilyDesk Build 1367
+====================
+
+This build adds three approved Art Deco optional widgets:
+
+- ArtDecoCalculator-1.0.0.emilywidget
+- ArtDecoCurrencyConverter-1.0.0.emilywidget
+- ArtDecoSystemInformation-1.0.0.emilywidget
+
+Each widget includes a compact transparent-corner Art Deco skin, Gallery
+preview and icon, Edit in Designer access, an editable background layer,
+anti-aliased text, and installed-theme switching.
+
+Run Build.cmd on Windows. Install Output\EmilyDeskInstaller.exe to update
+EmilyDesk to Build 1367, then import the three packages from
+Output\OptionalWidgets.

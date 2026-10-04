@@ -1,0 +1,11 @@
+EmilyDesk Build 1338
+
+This build removes the unintended charcoal-grey area surrounding imported
+theme docks. Imported dock artwork is now fitted using its visible alpha bounds
+instead of scaling the transparent canvas padding into the dock window.
+
+The intended dark inner dock panel and copper Ember Glow frame are unchanged.
+Build 1337 weather size, snapping, and smooth edge-release behavior are retained.
+
+Run Build.cmd and use the installer identified as Build 1338 only after the
+build reports BUILD SUCCESSFUL.

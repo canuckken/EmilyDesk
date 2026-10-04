@@ -1,0 +1,29 @@
+EmilyDesk Build 1355 - System Information Readability
+=====================================================
+
+What changed
+------------
+- Enlarged Steampunk System Information from 500 x 330 to 550 x 363 while
+  preserving the approved skin artwork and its aspect ratio.
+- Changed the brass-plate title to dark brown and enlarged every information
+  font for clearer reading.
+- Moved the information layout upward and widened both columns so memory,
+  Windows, computer, network, and Core Temp details have more room.
+- Preserved the CPU, memory, and disk meters and all native system readings.
+- Preserved optional direct Core Temp shared-memory temperature support. Core
+  Temp is not required for any other reading.
+- Updated the Gallery preview and icon for the enlarged layout.
+- Updated the System Information widget to version 1.0.1 and its assembly to
+  version 1.0.1.0.
+
+Building
+--------
+Run Build.cmd on the Windows build computer. A successful build creates:
+
+  Output\EmilyDeskInstaller.exe
+  Output\OptionalWidgets\SteampunkCalculator-1.1.1.emilywidget
+  Output\OptionalWidgets\SteampunkSystemInformation-1.0.1.emilywidget
+
+An installed System Information 1.0.0 can be updated by importing version
+1.0.1 and choosing Replace existing widget. EmilyDesk does not need to be
+reinstalled, and personal widget placement/settings are preserved.

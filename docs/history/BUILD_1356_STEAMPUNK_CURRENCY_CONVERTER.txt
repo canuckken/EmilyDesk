@@ -1,0 +1,44 @@
+EmilyDesk Build 1356 - Steampunk Currency Converter
+===================================================
+
+What changed
+------------
+- Completed the Currency Converter as the third importable optional widget.
+- Replaced the teal prototype appearance with a realistic brass, copper,
+  mahogany, and leather Steampunk design matching the approved Calculator and
+  System Information widgets.
+- Set the widget surface to 420 x 390, matching the Steampunk Calendar.
+- Preserved CAD as the default source currency and USD as the default target.
+- Preserved configurable amounts and common currencies, swap, manual refresh,
+  automatic 30-minute refresh, saved settings, scaling, opacity, and pause.
+- Uses Frankfurter's current v2 daily reference-rate endpoint without an API
+  key. Conversion occurs locally after the reference rate is received.
+- A failed refresh continues showing the last successful in-memory rate when
+  one is available. The widget clearly reports when no rate is available.
+- Added artwork-aware snap bounds, an updated Gallery preview and icon, and a
+  separately packaged skin.
+- Applied AntiAliasGridFit text rendering to both Currency Converter and the
+  completed System Information widget so text anti-aliasing remains the
+  standard for EmilyDesk optional widgets.
+- The widget remains outside the EmilyDesk installer and is imported only when
+  wanted.
+
+Building
+--------
+Run Build.cmd on the Windows build computer. A successful build creates:
+
+  Output\EmilyDeskInstaller.exe
+  Output\OptionalWidgets\SteampunkCalculator-1.1.1.emilywidget
+  Output\OptionalWidgets\SteampunkSystemInformation-1.0.2.emilywidget
+  Output\OptionalWidgets\SteampunkCurrencyConverter-1.0.0.emilywidget
+
+The installer does not need to be run. Import the Currency Converter package
+from Output\OptionalWidgets using EmilyDesk's Import Widget command.
+Import SteampunkSystemInformation-1.0.2.emilywidget the same way and choose
+Replace existing widget to apply text anti-aliasing to version 1.0.1.
+
+Controls
+--------
+- Double-click the widget to change the amount and currencies.
+- Right-click and choose Swap currencies to reverse the pair.
+- Right-click and choose Refresh exchange rate to retrieve the latest rate.

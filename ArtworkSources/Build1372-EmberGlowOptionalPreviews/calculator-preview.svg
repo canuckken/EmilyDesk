@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="420" viewBox="0 0 300 420">
+  <defs>
+    <linearGradient id="display" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24150f"/><stop offset="1" stop-color="#0c0807"/></linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b2d18"/><stop offset="0.48" stop-color="#351b12"/><stop offset="1" stop-color="#160d0a"/></linearGradient>
+    <linearGradient id="accentKey" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ad551d"/><stop offset="1" stop-color="#52200c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>text{font-family:'Segoe UI',sans-serif;fill:#f6dfbd}.serif{font-family:Georgia,serif}.amber{fill:#ff9b28}</style>
+  </defs>
+  <image xlink:href="ember-glow-calculator-skin.png" width="300" height="420"/>
+  <text x="150" y="61" text-anchor="middle" font-size="16" font-weight="bold" class="serif">EMBER GLOW</text>
+  <text x="150" y="74" text-anchor="middle" font-size="7" font-weight="bold" fill="#d9873a">CALCULATOR</text>
+  <rect x="43" y="88" width="214" height="58" rx="12" fill="url(#display)" stroke="#f47c18" stroke-width="1.8" filter="url(#glow)"/>
+  <text x="239" y="127" text-anchor="end" font-size="29" font-weight="bold" class="serif amber">0</text>
+  <g fill="url(#key)" stroke="#d4651d" stroke-width="1.2">
+    <rect x="43" y="158" width="47" height="36" rx="8"/><rect x="99" y="158" width="47" height="36" rx="8"/><rect x="155" y="158" width="47" height="36" rx="8"/><rect x="211" y="158" width="47" height="36" rx="8" fill="url(#accentKey)"/>
+    <rect x="43" y="202" width="47" height="36" rx="8"/><rect x="99" y="202" width="47" height="36" rx="8"/><rect x="155" y="202" width="47" height="36" rx="8"/><rect x="211" y="202" width="47" height="36" rx="8" fill="url(#accentKey)"/>
+    <rect x="43" y="246" width="47" height="36" rx="8"/><rect x="99" y="246" width="47" height="36" rx="8"/><rect x="155" y="246" width="47" height="36" rx="8"/><rect x="211" y="246" width="47" height="36" rx="8" fill="url(#accentKey)"/>
+    <rect x="43" y="290" width="47" height="36" rx="8"/><rect x="99" y="290" width="47" height="36" rx="8"/><rect x="155" y="290" width="47" height="36" rx="8"/><rect x="211" y="290" width="47" height="36" rx="8" fill="url(#accentKey)"/>
+    <rect x="43" y="334" width="47" height="36" rx="8"/><rect x="99" y="334" width="47" height="36" rx="8"/><rect x="155" y="334" width="103" height="36" rx="8" fill="url(#accentKey)"/>
+  </g>
+  <g font-size="17" text-anchor="middle"><text x="66.5" y="182">C</text><text x="122.5" y="182">+/−</text><text x="178.5" y="182">%</text><text x="234.5" y="182">÷</text><text x="66.5" y="226">7</text><text x="122.5" y="226">8</text><text x="178.5" y="226">9</text><text x="234.5" y="226">×</text><text x="66.5" y="270">4</text><text x="122.5" y="270">5</text><text x="178.5" y="270">6</text><text x="234.5" y="270">−</text><text x="66.5" y="314">1</text><text x="122.5" y="314">2</text><text x="178.5" y="314">3</text><text x="234.5" y="314">+</text><text x="66.5" y="358">0</text><text x="122.5" y="358">.</text><text x="206.5" y="358">=</text></g>
+</svg>

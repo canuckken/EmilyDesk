@@ -1,0 +1,7 @@
+EMILYDESK BUILD 1334
+====================
+
+Fixes the missing Ember Glow Weather background, removes the light matte from
+the Calendar frame, and makes the Dashboard Docks page include imported themes.
+
+Clock and Recycle Bin artwork are unchanged.
