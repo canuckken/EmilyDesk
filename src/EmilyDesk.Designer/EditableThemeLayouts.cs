@@ -62,6 +62,82 @@ namespace EmilyDesk.Designer
             _layout.CalendarMoveGroupVersion = 1;
         }
 
+        private void EnsureCalendarTodayHighlightLayer()
+        {
+            if (_widgetKind != "calendar" || _layout == null ||
+                _layout.Elements == null) return;
+
+            // Old saved layouts carry sample labels 1..42. Keep the cell
+            // identifiers, but replace those samples with real calendar dates.
+            for (int index = 0; index < 42; index++)
+            {
+                string id = "date-" + index;
+                DesignerElement date = _layout.Elements.Find(delegate(DesignerElement item)
+                {
+                    return item != null && item.Id == id;
+                });
+                if (date == null || date.Binding != "Calendar: Date") continue;
+                string sample = (index + 1).ToString(
+                    System.Globalization.CultureInfo.InvariantCulture);
+                if (date.Text == sample)
+                    date.Text = _calendarReference.ResolveEditableCalendarText(
+                        ToSavedLayer(date));
+                if (date.Name == "Date " + sample)
+                    date.Name = "Date Cell " + sample;
+            }
+            if (_layout.DeletedElementIds != null &&
+                _layout.DeletedElementIds.Contains("today-highlight")) return;
+
+            string currentId = "date-" + _calendarReference.TodayCellIndex();
+            DesignerElement current = _layout.Elements.Find(delegate(DesignerElement item)
+            {
+                return item != null && item.Id == currentId;
+            });
+            if (current == null) return;
+
+            DesignerElement highlight = _layout.Elements.Find(delegate(DesignerElement item)
+            {
+                return item != null && item.Id == "today-highlight";
+            });
+            if (highlight == null)
+            {
+                float diameter = Math.Min(22F, current.Height - 5F);
+                highlight = CreateTextElement("today-highlight", "Current Day Highlight",
+                    string.Empty, "Calendar: Today Highlight",
+                    current.X + (current.Width - diameter) / 2F,
+                    current.Y + (current.Height - diameter) / 2F,
+                    diameter, diameter, 10F, false);
+                highlight.ColorArgb = (EmilyDeskThemeCatalog.Get(_weatherTheme).IsImported
+                    ? Color.FromArgb(218, 151, 39)
+                    : EmilyDeskThemeCatalog.Get(_weatherTheme).Accent).ToArgb();
+                highlight.AnchorId = currentId;
+                highlight.MoveGroup = "calendar-grid-text";
+                highlight.MoveWithGroup = false;
+                int datePosition = _layout.Elements.FindIndex(delegate(DesignerElement item)
+                {
+                    return item != null && item.Id == "date-0";
+                });
+                _layout.Elements.Insert(datePosition < 0 ? _layout.Elements.Count : datePosition,
+                    highlight);
+            }
+            else if (!string.Equals(highlight.AnchorId, currentId,
+                StringComparison.OrdinalIgnoreCase))
+            {
+                DesignerElement anchor = _layout.Elements.Find(delegate(DesignerElement item)
+                {
+                    return item != null && item.Id == highlight.AnchorId;
+                });
+                if (anchor != null)
+                {
+                    highlight.X += current.X - anchor.X;
+                    highlight.Y += current.Y - anchor.Y;
+                }
+                highlight.AnchorId = currentId;
+            }
+            highlight.MoveGroup = "calendar-grid-text";
+            highlight.MoveWithGroup = false;
+        }
+
         private Color EditableInk(bool secondary)
         {
             if (_weatherTheme == "Modern")

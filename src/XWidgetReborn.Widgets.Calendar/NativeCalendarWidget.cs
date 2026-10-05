@@ -1754,12 +1754,16 @@ namespace XWidgetReborn.Widgets.Calendar
                 CalendarButton.Previous, palette);
             if (!next.IsEmpty) DrawIndustrialButtonBackground(graphics, next,
                 CalendarButton.Next, palette);
+            IndustrialCalendarDesignerElement highlight = layout.IsDeleted("today-highlight")
+                ? null : layout.Find("today-highlight");
             foreach (IndustrialCalendarDesignerElement element in layout.Elements)
             {
                 if (element == null || !element.Visible ||
                     element.Surface != 0 ||
                     layout.IsDeleted(element.Id)) continue;
                 if (string.Equals(element.Id, "main-background",
+                    StringComparison.OrdinalIgnoreCase)) continue;
+                if (string.Equals(element.Id, "today-highlight",
                     StringComparison.OrdinalIgnoreCase)) continue;
                 Color? dynamicColor = null;
                 int index;
@@ -1769,17 +1773,27 @@ namespace XWidgetReborn.Widgets.Calendar
                     DateTime date = CalendarCellDate(index);
                     if (date.Date == _now.Date)
                     {
-                        RectangleF cell = element.Bounds;
-                        using (var accent = new SolidBrush(palette.Accent))
-                            graphics.FillEllipse(accent, cell.X + Math.Max(2F, cell.Width * .27F),
-                                cell.Y + 3F, Math.Max(8F, cell.Width * .46F),
-                                Math.Max(8F, cell.Height - 6F));
+                        if (highlight != null)
+                            DrawEditableTodayHighlight(graphics, highlight, element,
+                                layout.Find(highlight.AnchorId));
+                        else if (!layout.IsDeleted("today-highlight"))
+                        {
+                            RectangleF cell = element.Bounds;
+                            using (var accent = new SolidBrush(palette.Accent))
+                                graphics.FillEllipse(accent, cell.X + Math.Max(2F, cell.Width * .27F),
+                                    cell.Y + 3F, Math.Max(8F, cell.Width * .46F),
+                                    Math.Max(8F, cell.Height - 6F));
+                        }
                     }
                     // Keep automatic today/weekend/off-month colours only for
                     // uncustomised date ink. A chosen colour is never discarded.
-                    if (element.ColorArgb == palette.PrimaryText.ToArgb())
-                        dynamicColor = date.Date == _now.Date ? palette.TodayText :
-                            date.Month != _displayMonth.Month ? Color.FromArgb(105, 108, 108) :
+                    if (date.Date == _now.Date &&
+                        ((highlight != null && highlight.Visible && highlight.Opacity > 0F) ||
+                         (highlight == null && !layout.IsDeleted("today-highlight"))))
+                        dynamicColor = TodayHighlightTextColor(highlight == null
+                            ? palette.Accent : Color.FromArgb(highlight.ColorArgb));
+                    else if (element.ColorArgb == palette.PrimaryText.ToArgb())
+                        dynamicColor = date.Month != _displayMonth.Month ? Color.FromArgb(105, 108, 108) :
                             IsWeekend(date.DayOfWeek) ? palette.Weekend : palette.PrimaryText;
                 }
                 else if (element.Kind == 0 && element.Binding == "Calendar: Weekday" &&
@@ -1810,6 +1824,48 @@ namespace XWidgetReborn.Widgets.Calendar
             return first.AddDays(index - offset);
         }
 
+        public int TodayCellIndex()
+        {
+            DateTime first = new DateTime(_now.Year, _now.Month, 1);
+            int offset = ((int)first.DayOfWeek - (int)FirstDayOfWeek() + 7) % 7;
+            return offset + _now.Day - 1;
+        }
+
+        public bool IsTodayCell(string id)
+        {
+            int index;
+            return TryCalendarIndex(id, "date-", 42, out index) &&
+                CalendarCellDate(index).Date == _now.Date;
+        }
+
+        public string ResolveEditableCalendarText(DesignerLayer layer)
+        {
+            return layer == null ? string.Empty : ResolveCalendarDesignerText(layer);
+        }
+
+        public Color TodayHighlightTextColor(Color background)
+        {
+            return EmilyDeskThemeCatalog.BestTextOn(background);
+        }
+
+        private static void DrawEditableTodayHighlight(Graphics graphics,
+            DesignerLayer highlight, DesignerLayer today, DesignerLayer anchor)
+        {
+            if (!highlight.Visible || highlight.Opacity <= 0F) return;
+            RectangleF bounds = highlight.Bounds;
+            if (anchor != null)
+                bounds.Offset(today.Bounds.X - anchor.Bounds.X,
+                    today.Bounds.Y - anchor.Bounds.Y);
+            else
+                bounds = new RectangleF(today.Bounds.X + (today.Bounds.Width - bounds.Width) / 2F,
+                    today.Bounds.Y + (today.Bounds.Height - bounds.Height) / 2F,
+                    bounds.Width, bounds.Height);
+            Color color = Color.FromArgb((int)(255F * Math.Max(0F,
+                Math.Min(1F, highlight.Opacity))), Color.FromArgb(highlight.ColorArgb));
+            using (var brush = new SolidBrush(color))
+                graphics.FillEllipse(brush, bounds);
+        }
+
         private string ResolveCalendarDesignerText(DesignerLayer element)
         {
             string binding = (element.Binding ?? "").ToLowerInvariant();
@@ -1832,6 +1888,7 @@ namespace XWidgetReborn.Widgets.Calendar
                 case "calendar: date":
                     return (TryCalendarIndex(element.Id, "date-", 42, out index)
                         ? CalendarCellDate(index) : _now).Day.ToString(CultureInfo.CurrentCulture);
+                case "calendar: today highlight": return string.Empty;
                 default: return element.Text;
             }
         }

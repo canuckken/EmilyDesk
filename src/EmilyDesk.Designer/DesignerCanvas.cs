@@ -70,6 +70,7 @@ namespace EmilyDesk.Designer
         // The canvas stays renderer-backed, while this lets the form supply a
         // readable preview value for an element's plain-language binding.
         public Func<DesignerElement, string> BoundTextRenderer { get; set; }
+        public Func<DesignerElement, Color?> TextColorRenderer { get; set; }
         public Action<Graphics, DesignerElement, RectangleF> TextBackgroundRenderer { get; set; }
         public DesignerSurface ActiveSurface
         {
@@ -353,7 +354,9 @@ namespace EmilyDesk.Designer
                 element.FontName, element.FontFile,
                 Math.Max(4F, element.FontSize * element.Scale), style))
             using (var brush = new SolidBrush(Color.FromArgb(
-                (int)(255 * Clamp(element.Opacity)), Color.FromArgb(element.ColorArgb))))
+                (int)(255 * Clamp(element.Opacity)), TextColorRenderer == null
+                    ? Color.FromArgb(element.ColorArgb)
+                    : TextColorRenderer(element) ?? Color.FromArgb(element.ColorArgb))))
             using (var format = new StringFormat { LineAlignment = StringAlignment.Center })
             {
                 format.Alignment = element.Alignment == DesignerTextAlignment.Center ?

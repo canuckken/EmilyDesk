@@ -214,6 +214,8 @@ namespace EmilyDesk.Designer
         public string Binding { get; set; }
         [Browsable(false)]
         public string BindingDomain { get; set; }
+        [Browsable(false)]
+        public string AnchorId { get; set; }
         [Category("Text"), DisplayName("Font"),
          TypeConverter(typeof(DesignerFontNameConverter))]
         public string FontName { get; set; }

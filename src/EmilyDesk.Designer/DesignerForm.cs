@@ -331,9 +331,30 @@ namespace EmilyDesk.Designer
                     return _optionalWidgetDesigner.ResolveDesignerText(
                         ToSavedLayer(element));
                 };
+            _canvas.TextColorRenderer = delegate(DesignerElement element)
+            {
+                if (_widgetKind != "calendar" ||
+                    !_calendarReference.IsTodayCell(element.Id) ||
+                    _layout == null || _layout.Elements == null) return null;
+                DesignerElement highlight = _layout.Elements.Find(delegate(DesignerElement item)
+                {
+                    return item != null && item.Id == "today-highlight";
+                });
+                return highlight != null && highlight.Visible && highlight.Opacity > 0F
+                    ? (Color?)_calendarReference.TodayHighlightTextColor(
+                        Color.FromArgb(highlight.ColorArgb)) : null;
+            };
             _canvas.TextBackgroundRenderer = delegate(Graphics graphics,
                 DesignerElement element, RectangleF bounds)
             {
+                if (_widgetKind == "calendar" && element.Id == "today-highlight")
+                {
+                    Color color = Color.FromArgb((int)(255F * Math.Max(0F,
+                        Math.Min(1F, element.Opacity))), Color.FromArgb(element.ColorArgb));
+                    using (var brush = new SolidBrush(color))
+                        graphics.FillEllipse(brush, bounds);
+                    return;
+                }
                 var textBackground = _optionalWidgetDesigner as
                     IWidgetDesignerTextBackgroundProvider;
                 if (textBackground != null)
@@ -466,6 +487,8 @@ namespace EmilyDesk.Designer
                 Name = element.Name,
                 Text = element.Text,
                 Binding = element.Binding,
+                BindingDomain = element.BindingDomain,
+                AnchorId = element.AnchorId,
                 Kind = (int)element.Kind,
                 Surface = (int)element.Surface,
                 X = element.X,
@@ -577,6 +600,9 @@ namespace EmilyDesk.Designer
         {
             if (element == null) return string.Empty;
             string binding = element.Binding ?? string.Empty;
+            if (_widgetKind == "calendar" && binding.StartsWith("Calendar:",
+                StringComparison.OrdinalIgnoreCase))
+                return _calendarReference.ResolveEditableCalendarText(ToSavedLayer(element));
             if (string.Equals(binding, "Weather: Location",
                 StringComparison.OrdinalIgnoreCase)) return "Port Williams";
             if (string.Equals(binding, "Weather: Temperature",
@@ -2485,6 +2511,7 @@ namespace EmilyDesk.Designer
                     IsElementDeleted(_layout, element.Id);
             });
             EnsureEditableBackgroundLayers();
+            EnsureCalendarTodayHighlightLayer();
             EnsureCalendarMoveGroups();
             PrepareClockHandEditing();
             // Saved styles are authoritative. First-use defaults are assigned
@@ -4509,4 +4536,3 @@ namespace EmilyDesk.Designer
         }
     }
 }
-

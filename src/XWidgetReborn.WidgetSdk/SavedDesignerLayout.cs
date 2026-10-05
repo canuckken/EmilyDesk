@@ -42,6 +42,8 @@ namespace XWidgetReborn.WidgetSdk
         public string Name { get; set; }
         public string Text { get; set; }
         public string Binding { get; set; }
+        public string BindingDomain { get; set; }
+        public string AnchorId { get; set; }
         public int Kind { get; set; }
         public int Surface { get; set; }
         public float X { get; set; }

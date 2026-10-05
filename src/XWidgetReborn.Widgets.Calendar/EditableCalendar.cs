@@ -92,10 +92,17 @@ namespace XWidgetReborn.Widgets.Calendar
                     layout.BackgroundImage,
                     new RectangleF(0, 0, size.Width, size.Height), 1F);
             CalendarPalette palette = Palette();
+            DesignerLayer highlight = EditableCalendarDeleted(layout, "today-highlight")
+                ? null : layout.Elements.Find(delegate(DesignerLayer item)
+                {
+                    return item != null && item.Id == "today-highlight";
+                });
             foreach (DesignerLayer item in layout.Elements)
             {
                 if (item == null || !item.Visible || item.Surface != 0 || EditableCalendarDeleted(layout, item.Id)) continue;
                 if (string.Equals(item.Id, "main-background",
+                    StringComparison.OrdinalIgnoreCase)) continue;
+                if (string.Equals(item.Id, "today-highlight",
                     StringComparison.OrdinalIgnoreCase)) continue;
                 RenderEditableButtonBackground(graphics, item.Id, item.Bounds);
                 Color? dynamicColor = null;
@@ -106,14 +113,28 @@ namespace XWidgetReborn.Widgets.Calendar
                     if (date.Month != _displayMonth.Month) continue;
                     if (date.Date == _now.Date)
                     {
-                        RectangleF cell = item.Bounds;
-                        float inset = IsArtDeco ? 17F : 7F;
-                        using (var accent = new SolidBrush(palette.Accent))
-                            graphics.FillEllipse(accent, cell.X + inset, cell.Y + 4,
-                                Math.Max(1, cell.Width - inset * 2), Math.Max(1, cell.Height - 8));
+                        if (highlight != null)
+                            DrawEditableTodayHighlight(graphics, highlight, item,
+                                layout.Elements.Find(delegate(DesignerLayer anchor)
+                                {
+                                    return anchor != null && anchor.Id == highlight.AnchorId;
+                                }));
+                        else if (!EditableCalendarDeleted(layout, "today-highlight"))
+                        {
+                            RectangleF cell = item.Bounds;
+                            float inset = IsArtDeco ? 17F : 7F;
+                            using (var accent = new SolidBrush(palette.Accent))
+                                graphics.FillEllipse(accent, cell.X + inset, cell.Y + 4,
+                                    Math.Max(1, cell.Width - inset * 2), Math.Max(1, cell.Height - 8));
+                        }
                     }
-                    if (item.ColorArgb == palette.PrimaryText.ToArgb())
-                        dynamicColor = date.Date == _now.Date ? palette.TodayText :
+                    if (date.Date == _now.Date &&
+                        ((highlight != null && highlight.Visible && highlight.Opacity > 0F) ||
+                         (highlight == null && !EditableCalendarDeleted(layout, "today-highlight"))))
+                        dynamicColor = TodayHighlightTextColor(highlight == null
+                            ? palette.Accent : Color.FromArgb(highlight.ColorArgb));
+                    else if (item.ColorArgb == palette.PrimaryText.ToArgb())
+                        dynamicColor =
                             IsWeekend(date.DayOfWeek) ? palette.Weekend : palette.PrimaryText;
                 }
                 else if (item.Binding == "Calendar: Weekday" && item.ColorArgb == palette.SecondaryText.ToArgb() &&
